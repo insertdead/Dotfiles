@@ -35,6 +35,14 @@ alias ...="cd ../.."
 alias .4="cd ../../.."
 #mpv aliases
 alias mpv-doom="mpv --shuffle ~/Music/Game\ OSTs/Doom-EternalOST"
+#Power control
+alias reboot="sudo reboot"
+alias poweroff="sudo poweroff"
+alias shutdown="sudo shutdown"
+#Logout alias for X
+alias logout="kill -15 -1"
+#nvim alias
+alias vim="nvim"
 #Prompt
 PROMPT="%(!.#.<) %F{cyan}%*%f | %F{yellow}%n%f@ %U%F{97}%2~%f%u %(!.#.>) "
 RPROMPT="%(?.√.X:%?)"
@@ -60,7 +68,9 @@ autoload -Uz _zinit
 
 #Zinit plugins
 zinit light kazhala/dotbare
-zinit light zsh-users/zsh-syntax-highlighting
+zinit light zdharma/fast-syntax-highlighting
+zinit ice wait lucid atload '_zsh_autosuggest_start'
+zinit light zsh-users/zsh-autosuggestions
 
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
@@ -71,5 +81,3 @@ zinit light-mode for \
     zinit-zsh/z-a-bin-gem-node
 
 ### End of Zinit's installer chunk
-
-#Dotbare
