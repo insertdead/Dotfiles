@@ -1,0 +1,25 @@
+defaults
+auth	on
+tls	on
+tls_trust_file	/etc/ssl/certs/ca-certificates.crt
+logfile /home/madsci/.config/msmtp/msmtp.log
+
+
+
+
+account outlook-main
+host smtp-mail.outlook.com
+port 587
+from madsci@outlook.com
+user madsci@outlook.com
+passwordeval "pass mutt-wizard-outlook-main"
+
+
+account school
+host smtp.office365.com
+port 587
+from roinewatsonm@csviamonde.net
+user roinewatsonm@csviamonde.net
+passwordeval "pass mutt-wizard-school"
+
+

@@ -1,0 +1,14 @@
+2020/09/25-11:45:42.470 1933 Reusing MANIFEST /home/madsci/.config/Microsoft/Microsoft Teams/IndexedDB/https_teams.microsoft.com_0.indexeddb.leveldb/MANIFEST-000001
+2020/09/25-11:45:42.470 1933 Recovering log #48
+2020/09/25-11:45:42.478 1933 Reusing old log /home/madsci/.config/Microsoft/Microsoft Teams/IndexedDB/https_teams.microsoft.com_0.indexeddb.leveldb/000048.log 
+2020/09/25-11:45:49.127 2106 Level-0 table #55: started
+2020/09/25-11:45:49.143 2106 Level-0 table #55: 1506123 bytes OK
+2020/09/25-11:45:49.148 2106 Delete type=0 #48
+2020/09/25-11:57:43.753 2106 Compacting 1@1 + 2@2 files
+2020/09/25-11:57:43.785 2106 Generated table #56@1: 8008 keys, 2160441 bytes
+2020/09/25-11:57:43.798 2106 Generated table #57@1: 3613 keys, 1237926 bytes
+2020/09/25-11:57:43.798 2106 Compacted 1@1 + 2@2 files => 3398367 bytes
+2020/09/25-11:57:43.798 2106 compacted to: files[ 0 0 2 0 0 0 0 ]
+2020/09/25-11:57:43.799 2106 Delete type=2 #51
+2020/09/25-11:57:43.799 2106 Delete type=2 #52
+2020/09/25-11:57:43.799 2106 Delete type=2 #55

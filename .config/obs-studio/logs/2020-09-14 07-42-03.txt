@@ -1,0 +1,257 @@
+07:42:03 AM.092: CPU Name: Intel(R) Core(TM) i7-1065G7 CPU @ 1.30GHz
+07:42:03 AM.092: CPU Speed: 2541.688MHz
+07:42:03 AM.092: Physical Cores: 4, Logical Cores: 8
+07:42:03 AM.092: Physical Memory: 7601MB Total, 5431MB Free
+07:42:03 AM.092: Kernel Version: Linux 5.8.6-artix1-1
+07:42:03 AM.092: Distribution: Missing /etc/os-release !
+07:42:03 AM.093: Window System: X11.0, Vendor: The X.Org Foundation, Version: 1.20.9
+07:42:03 AM.094: Portable mode: false
+07:42:03 AM.177: OBS 25.0.8-2 (linux)
+07:42:03 AM.177: ---------------------------------
+07:42:03 AM.177: ---------------------------------
+07:42:03 AM.177: audio settings reset:
+07:42:03 AM.177: 	samples per sec: 44100
+07:42:03 AM.177: 	speakers:        2
+07:42:03 AM.181: ---------------------------------
+07:42:03 AM.181: Initializing OpenGL...
+07:42:03 AM.244: Loading up OpenGL on adapter Intel Mesa Intel(R) Iris(R) Plus Graphics (ICL GT2)
+07:42:03 AM.244: OpenGL loaded successfully, version 4.6 (Core Profile) Mesa 20.1.7, shading language 4.60
+07:42:03 AM.276: ---------------------------------
+07:42:03 AM.276: video settings reset:
+07:42:03 AM.276: 	base resolution:   1920x1080
+07:42:03 AM.276: 	output resolution: 1280x720
+07:42:03 AM.276: 	downscale filter:  Bicubic
+07:42:03 AM.276: 	fps:               30/1
+07:42:03 AM.276: 	format:            NV12
+07:42:03 AM.276: 	YUV mode:          601/Partial
+07:42:03 AM.276: NV12 texture support not available
+07:42:03 AM.278: Audio monitoring device:
+07:42:03 AM.278: 	name: Default
+07:42:03 AM.278: 	id: default
+07:42:03 AM.279: ---------------------------------
+07:42:03 AM.280: Failed to load 'en-US' text for module: 'decklink-ouput-ui.so'
+07:42:03 AM.340: A DeckLink iterator could not be created.  The DeckLink drivers may not be installed
+07:42:03 AM.340: No blackmagic support
+07:42:03 AM.360: os_dlopen(libnvidia-encode.so.1->libnvidia-encode.so.1): libnvidia-encode.so.1: cannot open shared object file: No such file or directory
+07:42:03 AM.360: 
+07:42:03 AM.360: FFMPEG VAAPI supported
+07:42:03 AM.360: os_dlopen(/usr//lib/obs-plugins/obs-libfdk.so->/usr//lib/obs-plugins/obs-libfdk.so): libfdk-aac.so.2: cannot open shared object file: No such file or directory
+07:42:03 AM.360: 
+07:42:03 AM.360: Module '/usr//lib/obs-plugins/obs-libfdk.so' not loaded
+07:42:03 AM.364: os_dlopen(libvlc.so.5->libvlc.so.5): libvlc.so.5: cannot open shared object file: No such file or directory
+07:42:03 AM.364: 
+07:42:03 AM.364: Couldn't find VLC installation, VLC video source disabled
+07:42:03 AM.364: ---------------------------------
+07:42:03 AM.364:   Loaded Modules:
+07:42:03 AM.364:     vlc-video.so
+07:42:03 AM.364:     text-freetype2.so
+07:42:03 AM.364:     rtmp-services.so
+07:42:03 AM.364:     obs-x264.so
+07:42:03 AM.364:     obs-transitions.so
+07:42:03 AM.364:     obs-outputs.so
+07:42:03 AM.364:     obs-filters.so
+07:42:03 AM.364:     obs-ffmpeg.so
+07:42:03 AM.364:     linux-v4l2.so
+07:42:03 AM.364:     linux-pulseaudio.so
+07:42:03 AM.364:     linux-jack.so
+07:42:03 AM.364:     linux-decklink.so
+07:42:03 AM.364:     linux-capture.so
+07:42:03 AM.364:     linux-alsa.so
+07:42:03 AM.364:     image-source.so
+07:42:03 AM.364:     frontend-tools.so
+07:42:03 AM.364:     decklink-ouput-ui.so
+07:42:03 AM.364: ---------------------------------
+07:42:03 AM.364: ==== Startup complete ===============================================
+07:42:03 AM.364: Service '' not found
+07:42:03 AM.365: No scene file found, creating default scene
+07:42:03 AM.365: All scene data cleared
+07:42:03 AM.365: ------------------------------------------------
+07:42:03 AM.368: pulse-input: Server name: 'pulseaudio 13.0'
+07:42:03 AM.368: pulse-input: Audio format: s16le, 48000 Hz, 2 channels
+07:42:03 AM.368: pulse-input: Started recording from 'alsa_output.pci-0000_00_1f.3.analog-stereo.monitor'
+07:42:03 AM.369: pulse-input: Server name: 'pulseaudio 13.0'
+07:42:03 AM.369: pulse-input: Audio format: s16le, 48000 Hz, 2 channels
+07:42:03 AM.369: pulse-input: Started recording from 'alsa_input.pci-0000_00_1f.3.analog-stereo'
+07:42:03 AM.369: Switched to scene 'Scene'
+07:42:03 AM.369: Failed to glob scene collections
+07:42:03 AM.518: [rtmp-services plugin] Successfully updated file 'services.json' (version 145)
+07:42:03 AM.518: [rtmp-services plugin] Successfully updated package (version 145)
+07:42:05 AM.889: adding 23 milliseconds of audio buffering, total audio buffering is now 23 milliseconds (source: Desktop Audio)
+07:42:05 AM.889: 
+07:42:34 AM.097: 
+07:42:34 AM.097: ==== Auto-config wizard testing commencing ======
+
+07:42:34 AM.146: ---------------------------------
+07:42:34 AM.146: video settings reset:
+07:42:34 AM.146: 	base resolution:   1920x1080
+07:42:34 AM.146: 	output resolution: 1920x1080
+07:42:34 AM.146: 	downscale filter:  Bicubic
+07:42:34 AM.146: 	fps:               60/1
+07:42:34 AM.146: 	format:            NV12
+07:42:34 AM.146: 	YUV mode:          601/Partial
+07:42:34 AM.146: NV12 texture support not available
+07:42:34 AM.153: ---------------------------------
+07:42:34 AM.153: [x264 encoder: 'test_x264'] preset: veryfast
+07:42:34 AM.153: [x264 encoder: 'test_x264'] profile: high
+07:42:34 AM.154: [x264 encoder: 'test_x264'] settings:
+07:42:34 AM.154: 	rate_control: CRF
+07:42:34 AM.154: 	bitrate:      0
+07:42:34 AM.154: 	buffer size:  0
+07:42:34 AM.154: 	crf:          20
+07:42:34 AM.154: 	fps_num:      60
+07:42:34 AM.154: 	fps_den:      1
+07:42:34 AM.154: 	width:        1920
+07:42:34 AM.154: 	height:       1080
+07:42:34 AM.154: 	keyint:       250
+07:42:34 AM.154: 
+07:42:34 AM.170: ---------------------------------
+07:42:34 AM.171: [FFmpeg aac encoder: 'test_aac'] bitrate: 32, channels: 2, channel_layout: 3
+07:42:34 AM.171: 
+07:42:39 AM.172: Output 'null': stopping
+07:42:39 AM.172: Output 'null': Total frames output: 256
+07:42:39 AM.172: Output 'null': Total drawn frames: 300
+07:42:39 AM.286: Video stopped, number of skipped frames due to encoding lag: 157/293 (53.6%)
+07:42:39 AM.454: ---------------------------------
+07:42:39 AM.454: video settings reset:
+07:42:39 AM.454: 	base resolution:   1920x1080
+07:42:39 AM.454: 	output resolution: 1920x1080
+07:42:39 AM.454: 	downscale filter:  Bicubic
+07:42:39 AM.454: 	fps:               30/1
+07:42:39 AM.454: 	format:            NV12
+07:42:39 AM.454: 	YUV mode:          601/Partial
+07:42:39 AM.455: NV12 texture support not available
+07:42:39 AM.458: ---------------------------------
+07:42:39 AM.458: [x264 encoder: 'test_x264'] preset: veryfast
+07:42:39 AM.458: [x264 encoder: 'test_x264'] profile: high
+07:42:39 AM.458: [x264 encoder: 'test_x264'] settings:
+07:42:39 AM.458: 	rate_control: CRF
+07:42:39 AM.458: 	bitrate:      0
+07:42:39 AM.458: 	buffer size:  0
+07:42:39 AM.458: 	crf:          20
+07:42:39 AM.458: 	fps_num:      30
+07:42:39 AM.458: 	fps_den:      1
+07:42:39 AM.458: 	width:        1920
+07:42:39 AM.458: 	height:       1080
+07:42:39 AM.458: 	keyint:       250
+07:42:39 AM.458: 
+07:42:39 AM.463: ---------------------------------
+07:42:39 AM.463: [FFmpeg aac encoder: 'test_aac'] bitrate: 32, channels: 2, channel_layout: 3
+07:42:39 AM.463: 
+07:42:44 AM.465: Output 'null': stopping
+07:42:44 AM.465: Output 'null': Total frames output: 115
+07:42:44 AM.465: Output 'null': Total drawn frames: 150
+07:42:44 AM.509: Video stopped, number of skipped frames due to encoding lag: 1/143 (0.7%)
+07:42:44 AM.725: ---------------------------------
+07:42:44 AM.725: video settings reset:
+07:42:44 AM.725: 	base resolution:   1920x1080
+07:42:44 AM.725: 	output resolution: 1280x720
+07:42:44 AM.725: 	downscale filter:  Bicubic
+07:42:44 AM.725: 	fps:               60/1
+07:42:44 AM.725: 	format:            NV12
+07:42:44 AM.725: 	YUV mode:          601/Partial
+07:42:44 AM.726: NV12 texture support not available
+07:42:44 AM.727: ---------------------------------
+07:42:44 AM.727: [x264 encoder: 'test_x264'] preset: veryfast
+07:42:44 AM.727: [x264 encoder: 'test_x264'] profile: high
+07:42:44 AM.727: [x264 encoder: 'test_x264'] settings:
+07:42:44 AM.727: 	rate_control: CRF
+07:42:44 AM.727: 	bitrate:      0
+07:42:44 AM.727: 	buffer size:  0
+07:42:44 AM.727: 	crf:          20
+07:42:44 AM.727: 	fps_num:      60
+07:42:44 AM.727: 	fps_den:      1
+07:42:44 AM.727: 	width:        1280
+07:42:44 AM.727: 	height:       720
+07:42:44 AM.727: 	keyint:       250
+07:42:44 AM.727: 
+07:42:44 AM.733: ---------------------------------
+07:42:44 AM.734: [FFmpeg aac encoder: 'test_aac'] bitrate: 32, channels: 2, channel_layout: 3
+07:42:44 AM.734: 
+07:42:49 AM.735: Output 'null': stopping
+07:42:49 AM.735: Output 'null': Total frames output: 267
+07:42:49 AM.735: Output 'null': Total drawn frames: 299 (300 attempted)
+07:42:49 AM.735: Output 'null': Number of lagged frames due to rendering lag/stalls: 1 (0.3%)
+07:42:49 AM.742: Video stopped, number of skipped frames due to encoding lag: 20/296 (6.8%)
+07:42:49 AM.844: ---------------------------------
+07:42:49 AM.845: video settings reset:
+07:42:49 AM.845: 	base resolution:   1920x1080
+07:42:49 AM.845: 	output resolution: 1280x720
+07:42:49 AM.845: 	downscale filter:  Bicubic
+07:42:49 AM.845: 	fps:               30/1
+07:42:49 AM.845: 	format:            NV12
+07:42:49 AM.845: 	YUV mode:          601/Partial
+07:42:49 AM.845: NV12 texture support not available
+07:42:49 AM.849: ---------------------------------
+07:42:49 AM.849: [x264 encoder: 'test_x264'] preset: veryfast
+07:42:49 AM.849: [x264 encoder: 'test_x264'] profile: high
+07:42:49 AM.849: [x264 encoder: 'test_x264'] settings:
+07:42:49 AM.849: 	rate_control: CRF
+07:42:49 AM.849: 	bitrate:      0
+07:42:49 AM.849: 	buffer size:  0
+07:42:49 AM.849: 	crf:          20
+07:42:49 AM.849: 	fps_num:      30
+07:42:49 AM.849: 	fps_den:      1
+07:42:49 AM.849: 	width:        1280
+07:42:49 AM.849: 	height:       720
+07:42:49 AM.849: 	keyint:       250
+07:42:49 AM.849: 
+07:42:49 AM.851: ---------------------------------
+07:42:49 AM.852: [FFmpeg aac encoder: 'test_aac'] bitrate: 32, channels: 2, channel_layout: 3
+07:42:49 AM.852: 
+07:42:54 AM.853: Output 'null': stopping
+07:42:54 AM.854: Output 'null': Total frames output: 123
+07:42:54 AM.854: Output 'null': Total drawn frames: 150
+07:42:54 AM.949: ---------------------------------
+07:42:54 AM.949: video settings reset:
+07:42:54 AM.949: 	base resolution:   1920x1080
+07:42:54 AM.949: 	output resolution: 1148x646
+07:42:54 AM.949: 	downscale filter:  Bicubic
+07:42:54 AM.949: 	fps:               60/1
+07:42:54 AM.949: 	format:            NV12
+07:42:54 AM.949: 	YUV mode:          601/Partial
+07:42:54 AM.949: NV12 texture support not available
+07:42:54 AM.953: ---------------------------------
+07:42:54 AM.953: [x264 encoder: 'test_x264'] preset: veryfast
+07:42:54 AM.953: [x264 encoder: 'test_x264'] profile: high
+07:42:54 AM.954: [x264 encoder: 'test_x264'] settings:
+07:42:54 AM.954: 	rate_control: CRF
+07:42:54 AM.954: 	bitrate:      0
+07:42:54 AM.954: 	buffer size:  0
+07:42:54 AM.954: 	crf:          20
+07:42:54 AM.954: 	fps_num:      60
+07:42:54 AM.954: 	fps_den:      1
+07:42:54 AM.954: 	width:        1148
+07:42:54 AM.954: 	height:       646
+07:42:54 AM.954: 	keyint:       250
+07:42:54 AM.954: 
+07:42:54 AM.959: ---------------------------------
+07:42:54 AM.959: [FFmpeg aac encoder: 'test_aac'] bitrate: 32, channels: 2, channel_layout: 3
+07:42:54 AM.959: 
+07:42:59 AM.961: Output 'null': stopping
+07:42:59 AM.961: Output 'null': Total frames output: 272
+07:42:59 AM.961: Output 'null': Total drawn frames: 300
+07:43:00 AM.070: ---------------------------------
+07:43:00 AM.071: video settings reset:
+07:43:00 AM.071: 	base resolution:   1920x1080
+07:43:00 AM.071: 	output resolution: 1280x720
+07:43:00 AM.071: 	downscale filter:  Bicubic
+07:43:00 AM.071: 	fps:               30/1
+07:43:00 AM.071: 	format:            NV12
+07:43:00 AM.071: 	YUV mode:          601/Partial
+07:43:00 AM.071: NV12 texture support not available
+07:43:04 AM.109: ---------------------------------
+07:43:04 AM.110: video settings reset:
+07:43:04 AM.110: 	base resolution:   1920x1080
+07:43:04 AM.110: 	output resolution: 1920x1080
+07:43:04 AM.110: 	downscale filter:  Bicubic
+07:43:04 AM.110: 	fps:               30/1
+07:43:04 AM.110: 	format:            NV12
+07:43:04 AM.110: 	YUV mode:          601/Partial
+07:43:04 AM.110: NV12 texture support not available
+07:43:04 AM.118: 
+07:43:04 AM.118: ==== Auto-config wizard testing stopping ========
+
+07:43:14 AM.965: Failed to fetch parent window geometry!
+07:43:14 AM.965: Failed to fetch parent window geometry!
+07:43:14 AM.965: Failed to fetch parent window geometry!
+07:43:14 AM.966: Failed to fetch parent window geometry!

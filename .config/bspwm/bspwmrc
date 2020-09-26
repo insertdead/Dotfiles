@@ -1,0 +1,30 @@
+#! /bin/sh
+
+#Autostart things (Set background, start picom, etc)
+pgrep -x sxhkd > /dev/null || sxhkd &
+picom --config $HOME/.config/picom/picom.conf &
+nitrogen --restore &
+wal -nR &
+polybar -c $HOME/.config/polybar/config/config example &
+redshift -b 1.0:0.8 -t 6500:5000 &
+unclutter --timeout 15 &
+keepassxc &
+#Tag/Tab config
+bspc monitor -d I II III IV V VI VII VIII IX X
+
+#Border config
+bspc config border_width           2
+bspc config window_gap            12
+
+#Layouts
+bspc config split_ratio          0.52
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+#Application specific rules
+bspc rule -a Gimp desktop='^8' state=floating follow=on
+bspc rule -a Chromium desktop='^2'
+bspc rule -a mplayer2 state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+bspc rule -a Emacs state=tiled 

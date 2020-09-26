@@ -1,0 +1,11 @@
+#!/usr/bin/dash
+key=`xmodmap -pke | grep -w "59" | awk '{print \$NF}'` 
+## If this is the "us" layout, that will return "less"
+if [ $key == "less" ]; then
+    setxkbmap ca
+    polybar-msg hook kbd 2
+else
+    setxkbmap us
+    polybar-msg hook kbd 1
+    ## Add other things to be done here
+fi

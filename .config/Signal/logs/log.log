@@ -1,0 +1,156 @@
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"msg":"app ready","time":"2020-09-24T12:32:49.971Z","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"msg":"starting version 1.36.1","time":"2020-09-24T12:32:49.971Z","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"msg":"updateSchema:\n  Current user_version: 21;\n  Most recent db schema: 21;\n  SQLite version: 3.30.1;\n  SQLCipher version: 4.3.0 community;\n  (deprecated) schema_version: 109;\n","time":"2020-09-24T12:32:49.984Z","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"msg":"Initializing BrowserWindow config: {\"show\":true,\"width\":1892,\"height\":1012,\"minWidth\":680,\"minHeight\":550,\"autoHideMenuBar\":false,\"backgroundColor\":\"#3a76f0\",\"webPreferences\":{\"nodeIntegration\":false,\"nodeIntegrationInWorker\":false,\"contextIsolation\":false,\"preload\":\"/usr/lib/signal-desktop/resources/app.asar/preload.js\",\"nativeWindowOpen\":true,\"spellcheck\":true,\"backgroundThrottling\":false},\"icon\":\"/usr/lib/signal-desktop/resources/app.asar/images/signal-logo-desktop-linux.png\",\"x\":14,\"y\":54}","time":"2020-09-24T12:32:49.990Z","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"msg":"spellcheck: user locale: en-US","time":"2020-09-24T12:32:50.056Z","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"msg":"spellcheck: available spellchecker languages:  [\"af\",\"bg\",\"ca\",\"cs\",\"cy\",\"da\",\"de\",\"el\",\"en-AU\",\"en-CA\",\"en-GB\",\"en-US\",\"es\",\"es-419\",\"es-AR\",\"es-ES\",\"es-MX\",\"es-US\",\"et\",\"fa\",\"fo\",\"fr\",\"he\",\"hi\",\"hr\",\"hu\",\"hy\",\"id\",\"it\",\"ko\",\"lt\",\"lv\",\"nb\",\"nl\",\"pl\",\"pt-BR\",\"pt-PT\",\"ro\",\"ru\",\"sh\",\"sk\",\"sl\",\"sq\",\"sr\",\"sv\",\"ta\",\"tg\",\"tr\",\"uk\",\"vi\"]","time":"2020-09-24T12:32:50.056Z","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"msg":"spellcheck: setting languages to:  [\"en-US\"]","time":"2020-09-24T12:32:50.056Z","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"msg":"Begin ensuring permissions","time":"2020-09-24T12:32:50.067Z","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"msg":"Ensuring file permissions for 2 files","time":"2020-09-24T12:32:50.082Z","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"msg":"Finish ensuring permissions in 17ms","time":"2020-09-24T12:32:50.084Z","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"msg":"Updating BrowserWindow config: {\"maximized\":false,\"autoHideMenuBar\":false,\"fullscreen\":false,\"width\":900,\"height\":478,\"x\":1006,\"y\":588}","time":"2020-09-24T12:32:50.582Z","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"msg":"config/set: Saving ephemeral config to disk","time":"2020-09-24T12:32:50.582Z","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:50.949Z","msg":"x-attr dependncy did not load successfully","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:50.972Z","msg":"preload complete","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.161Z","msg":"pre-main prep time: 2 ms","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.227Z","msg":"background page reloaded","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.227Z","msg":"environment: production","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.250Z","msg":"SQL channel job 1 (getItemById) succeeded in 22ms","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.250Z","msg":"Storage fetch","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.430Z","msg":"SQL channel job 2 (getAllItems) succeeded in 180ms","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.448Z","msg":"SQL channel job 3 (createOrUpdateItem) succeeded in 17ms","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.452Z","msg":"Starting background data migration. Target version: 10","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.455Z","msg":"GET https://textsecure-service.whispersystems.org/v1/config","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.462Z","msg":"ConversationController: starting initial fetch","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.477Z","msg":"SQL channel job 14 (getAllIdentityKeys) succeeded in 15ms","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.477Z","msg":"SignalProtocolStore: Finished caching identityKeys data","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.477Z","msg":"SQL channel job 15 (getAllSessions) succeeded in 15ms","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.478Z","msg":"SignalProtocolStore: Finished caching sessions data","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.478Z","msg":"SQL channel job 10 (getRecentStickers) succeeded in 16ms","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.478Z","msg":"SQL channel job 8 (getAllStickerPacks) succeeded in 16ms","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.478Z","msg":"SQL channel job 9 (getAllStickers) succeeded in 16ms","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.479Z","msg":"SQL channel job 13 (getItemById) succeeded in 17ms","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.479Z","msg":"SQL channel job 11 (getRecentEmojis) succeeded in 17ms","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.479Z","msg":"SQL channel job 12 (getItemById) succeeded in 17ms","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.480Z","msg":"ConversationController: done with initial fetch","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.484Z","msg":"SignalProtocolStore: Finished caching preKeys data","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.484Z","msg":"SignalProtocolStore: Finished caching signedPreKeys data","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.484Z","msg":"checkForConflicts: starting...","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.484Z","msg":"checkForConflicts: complete!","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.486Z","msg":"Cleanup: starting...","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.486Z","msg":"Initializing network observer every 5000ms","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.487Z","msg":"Cleanup: Found 0 messages for cleanup","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.487Z","msg":"Cleanup: complete","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.487Z","msg":"listening for registration events","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.491Z","msg":"connect {\"connectCount\":0}","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.492Z","msg":"GET https://textsecure-service.whispersystems.org/v1/config","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.493Z","msg":"open inbox","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.819Z","msg":"GET https://textsecure-service.whispersystems.org/v1/config 200 Success","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.820Z","msg":"GET https://textsecure-service.whispersystems.org/v1/config 200 Success","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.820Z","msg":"Initializing socket and listening for messages","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.822Z","msg":"getAllFromCache","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.822Z","msg":"opening message socket https://textsecure-service.whispersystems.org","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.824Z","msg":"initializeGroupCredentialFetcher: starting...","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.824Z","msg":"maybeFetchCredentials: fetching credentials for 18536 through 18536","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.827Z","msg":"GET https://textsecure-service.whispersystems.org/v1/certificate/group/18536/18536","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.827Z","msg":"attachment_downloads/start: enabling","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.831Z","msg":"SQL channel job 27 (createOrUpdateItem) succeeded in 11ms","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.831Z","msg":"SQL channel job 28 (createOrUpdateItem) succeeded in 11ms","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.832Z","msg":"getAllFromCache loaded 0 saved envelopes","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.834Z","msg":"PUT https://textsecure-service.whispersystems.org/v1/messages/[REDACTED]5bc","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.891Z","msg":"GET https://textsecure-service.whispersystems.org/v1/certificate/group/18536/18536 200 Success","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.894Z","msg":"maybeFetchCredentials: Saving new credentials...","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.894Z","msg":"maybeFetchCredentials: Save complete.","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.895Z","msg":"PUT https://textsecure-service.whispersystems.org/v1/messages/[REDACTED]5bc 200 Success","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:51.895Z","msg":"Start idle detector","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.086Z","msg":"websocket open","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.323Z","msg":"queueing envelope +[REDACTED]367.1 1600912873210 (976920850dab487ca8de0058c99fa61a)","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.324Z","msg":"message from +[REDACTED]367.1 1600912873210 (976920850dab487ca8de0058c99fa61a)","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.325Z","msg":"queueing envelope +[REDACTED]367.1 1600912874346 (3588980383ab4de3ac46e810498db20b)","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.326Z","msg":"queueing envelope +[REDACTED]367.1 1600928808027 (0cee2c80f0be4623b8f02166c733feaa)","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.331Z","msg":"got fetch latest sync message","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.331Z","msg":"onFetchLatestSync: fetching latest manifest","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.331Z","msg":"storageService.runStorageServiceSyncJob: starting...","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.331Z","msg":"storageService.fetchManifest","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.331Z","msg":"GET https://textsecure-service.whispersystems.org/v1/storage/auth","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.332Z","msg":"message from +[REDACTED]367.1 1600912874346 (3588980383ab4de3ac46e810498db20b)","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.333Z","msg":"got fetch latest sync message","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.333Z","msg":"message from +[REDACTED]367.1 1600928808027 (0cee2c80f0be4623b8f02166c733feaa)","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.334Z","msg":"got fetch latest sync message","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.413Z","msg":"got request PUT /api/v1/queue/empty","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.415Z","msg":"MessageReceiver: finished processing messages after 'empty', now waiting for application","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.415Z","msg":"GET https://textsecure-service.whispersystems.org/v1/storage/auth 200 Success","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.416Z","msg":"GET https://storage.signal.org/v1/storage/manifest/version/193","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.824Z","msg":"GET https://storage.signal.org/v1/storage/manifest/version/193 200 Success","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.827Z","msg":"storageService.runStorageServiceSyncJob: manifest versions - previous: 193, current: 196","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.828Z","msg":"storageService.processManifest: localKeys.length 5","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.828Z","msg":"storageService.processManifest: remoteOnly.length 1","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.830Z","msg":"PUT https://storage.signal.org/v1/storage/read","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.947Z","msg":"PUT https://storage.signal.org/v1/storage/read 200 Success","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.950Z","msg":"storageService.mergeContactRecord: merging dFTGB/YqS9qZozxfe2TS9w==","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.953Z","msg":"storageService.mergeContactRecord: merged dFTGB/YqS9qZozxfe2TS9w==","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.953Z","msg":"storageService.runStorageServiceSyncJob: complete","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.953Z","msg":"onFetchLatestSync: fetching latest manifest","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.954Z","msg":"storageService.runStorageServiceSyncJob: starting...","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.954Z","msg":"storageService.fetchManifest","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:52.954Z","msg":"GET https://textsecure-service.whispersystems.org/v1/storage/auth","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:53.109Z","msg":"GET https://textsecure-service.whispersystems.org/v1/storage/auth 200 Success","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:53.109Z","msg":"GET https://storage.signal.org/v1/storage/manifest/version/196","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:53.240Z","msg":"GET https://storage.signal.org/v1/storage/manifest/version/196 204 Success","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:53.240Z","msg":"storageService.fetchManifest: nothing changed","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:53.240Z","msg":"storageService.runStorageServiceSyncJob: no manifest, returning early","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:53.240Z","msg":"onFetchLatestSync: fetching latest manifest","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:53.241Z","msg":"storageService.runStorageServiceSyncJob: starting...","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:53.241Z","msg":"storageService.fetchManifest","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:53.241Z","msg":"GET https://textsecure-service.whispersystems.org/v1/storage/auth","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:53.300Z","msg":"GET https://textsecure-service.whispersystems.org/v1/storage/auth 200 Success","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:53.300Z","msg":"GET https://storage.signal.org/v1/storage/manifest/version/196","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:53.475Z","msg":"GET https://storage.signal.org/v1/storage/manifest/version/196 204 Success","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:53.475Z","msg":"storageService.fetchManifest: nothing changed","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:53.475Z","msg":"storageService.runStorageServiceSyncJob: no manifest, returning early","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:53.475Z","msg":"MessageReceiver: emitting 'empty' event","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"msg":"updater/start: Updates disabled - not starting new version checks","time":"2020-09-24T12:32:53.485Z","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:53.483Z","msg":"onEmpty: All outstanding database requests complete","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:53.484Z","msg":"Next signed key rotation scheduled for 2020-09-25T13:03:31.276Z","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:53.484Z","msg":"refreshSenderCertificate: Getting new certificate...","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:53.485Z","msg":"GET https://textsecure-service.whispersystems.org/v1/certificate/delivery?includeUuid=true","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:53.619Z","msg":"GET https://textsecure-service.whispersystems.org/v1/certificate/delivery?includeUuid=true 200 Success","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:53.620Z","msg":"Next sender certificate refresh scheduled for 2020-09-25T12:32:53.620Z","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:53.620Z","msg":"refreshOurProfile","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:53.624Z","msg":"GET https://textsecure-service.whispersystems.org/v1/profile/[REDACTED]5bc/[REDACTED]8cd (unauth)","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:54.330Z","msg":"GET https://textsecure-service.whispersystems.org/v1/profile/[REDACTED]5bc/[REDACTED]8cd 200 Success","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:54.330Z","msg":"Setting sealedSender to ENABLED for conversation [REDACTED]5bc ([REDACTED]591)","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:54.331Z","msg":"GET https://cdn.signal.org/[REDACTED]NRA","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:54.574Z","msg":"GET https://cdn.signal.org/[REDACTED]NRA 200 Success","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:55.091Z","msg":"SQL channel job 49 (updateConversations) succeeded in 13ms","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:56.913Z","msg":"Upgrade message schema (with index): {\"done\":true,\"numProcessed\":0,\"fetchDuration\":1,\"upgradeDuration\":0,\"saveDuration\":0,\"totalDuration\":1}","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:56.913Z","msg":"Background migration complete. Stopping idle detector.","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:56.913Z","msg":"Stop idle detector","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:57.246Z","msg":"open inbox","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:57.296Z","msg":"GET https://textsecure-service.whispersystems.org/v1/profile/[REDACTED]5bc/[REDACTED]8cd (unauth)","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:57.298Z","msg":"SQL channel job 51 (getMessageMetricsForConversation) succeeded in 22ms","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:57.302Z","msg":"SQL channel job 53 (getLastConversationActivity) succeeded in 25ms","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:57.302Z","msg":"SQL channel job 52 (getLastConversationPreview) succeeded in 26ms","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:57.311Z","msg":"SQL channel job 54 (getOlderMessagesByConversation) succeeded in 11ms","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:57.318Z","msg":"ensureContactIds: e164-only match found (have UUID: false)","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:57.358Z","msg":"GET https://textsecure-service.whispersystems.org/v1/profile/[REDACTED]5bc/[REDACTED]8cd 200 Success","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:57.359Z","msg":"Setting sealedSender to ENABLED for conversation [REDACTED]5bc ([REDACTED]591)","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:57.359Z","msg":"GET https://cdn.signal.org/[REDACTED]NRA","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:57.414Z","msg":"GET https://cdn.signal.org/[REDACTED]NRA 200 Success","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:32:58.279Z","msg":"SQL channel job 58 (updateConversations) succeeded in 11ms","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:33:01.911Z","msg":"Removing notification","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:33:11.931Z","msg":"ensureContactIds: e164-only match found (have UUID: false)","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:33:13.727Z","msg":"Send pre-checks took 11 milliseconds","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:33:13.729Z","msg":"Sending message to conversation [REDACTED]5bc ([REDACTED]591) with timestamp 1600950793729","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:33:13.736Z","msg":"ensureContactIds: e164-only match found (have UUID: false)","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:33:13.919Z","msg":"ensureContactIds: e164-only match found (have UUID: false)","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:33:13.926Z","msg":"ensureContactIds: e164-only match found (have UUID: false)","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:33:13.945Z","msg":"GET https://textsecure-service.whispersystems.org/v2/attachments/form/upload","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:33:13.948Z","msg":"ensureContactIds: e164-only match found (have UUID: false)","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:33:14.004Z","msg":"GET https://textsecure-service.whispersystems.org/v2/attachments/form/upload 200 Success","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:33:14.005Z","msg":"POST https://cdn.signal.org/attachments/","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:33:14.521Z","msg":"POST https://cdn.signal.org/attachments/ 204 Success","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:33:14.536Z","msg":"Set message expiration {\"expiresAt\":1600951094529,\"sentAt\":1600950793729}","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:33:14.538Z","msg":"PUT https://textsecure-service.whispersystems.org/v1/messages/[REDACTED]5bc","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:33:14.593Z","msg":"PUT https://textsecure-service.whispersystems.org/v1/messages/[REDACTED]5bc 200 Success","v":0}
+{"name":"log","hostname":"artix-lptp","pid":22583,"level":30,"time":"2020-09-24T12:33:14.629Z","msg":"ensureContactIds: e164-only match found (have UUID: false)","v":0}

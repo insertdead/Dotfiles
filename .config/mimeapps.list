@@ -1,0 +1,7 @@
+[Default Applications]
+x-scheme-handler/msteams=teams.desktop
+
+[Added Associations]
+application/pdf=org.pwmt.zathura.desktop;gimp.desktop;
+image/png=sxiv.desktop;
+image/jpeg=sxiv.desktop;

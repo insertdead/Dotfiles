@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/madsci/.mozilla/firefox/vgeai9d8.default-release'
+let g:netrw_dirhist_3='/home/madsci/.config/bspwm'
+let g:netrw_dirhist_2='/etc/runit/sv/NetworkManager/supervise'
+let g:netrw_dirhist_1='/etc/runit/sv/NetworkManager'
