@@ -48,5 +48,8 @@
 ;(unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
-
-(package! vterm)
+(package! evil-tutor)
+(package! org-bullets)
+(package! elfeed)
+(package! emojify)
+(package! emms)

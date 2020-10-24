@@ -5,16 +5,16 @@ update_info=ksmserver_update_loginMode_value.upd:ksmserver_update_loginMode_valu
 count=0
 
 [Session: saved at previous logout]
-clientId1=1014d10fe0d9000160099019100000311870002
-clientId2=1014d10fe0d9000160099019100000311870003
-clientId3=1014d10fe0d9000160099019300000311870005
+clientId1=1014d10fe0d9000160228019600000019220002
+clientId2=1014d10fe0d9000160228019700000019220003
+clientId3=1014d10fe0d9000160228019900000019220005
 count=3
 program1=/usr/lib/DiscoverNotifier
 program2=pulseaudio
 program3=/usr/bin/firewall-applet
-restartCommand1=/usr/lib/DiscoverNotifier,-session,1014d10fe0d9000160099019100000311870002_1600990349_327643
+restartCommand1=/usr/lib/DiscoverNotifier,-session,1014d10fe0d9000160228019600000019220002_1602280220_428816
 restartCommand2=
-restartCommand3=/usr/bin/firewall-applet,-session,1014d10fe0d9000160099019300000311870005_1600990349_327685,-name,firewall-applet
+restartCommand3=/usr/bin/firewall-applet,-session,1014d10fe0d9000160228019900000019220005_1602280220_429150,-name,firewall-applet
 restartStyleHint1=0
 restartStyleHint2=0
 restartStyleHint3=0

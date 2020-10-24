@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	st
+	alacritty
 # Brightness & Sound control
 ## Brightness
 XF86MonBrightnessUp
@@ -31,23 +31,46 @@ XF86RFKill
 
 # program launcher
 super + @space
-	dmenu_run
+	rofi -show run
+super + shift + q
+	rofi -show window
 # connman_dmenu
 super + shift + @space
 	sudo connman_dmenu	
 # Launch Calcurse
 super + a
-	st calcurse
+	alacritty calcurse
+# Screenshot
+super + control + s
+	export time=$(date)
+	import Image/screenshots/${time}.png
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
 #Program launching hotkeys
-super + w
+super + control + w
 	firefox -new-window
+super + w
+	qutebrowser
 super + e
-	emacs
+	emacsclient --socket-name=madsci-emacsd -c -n || zenity --error --no-wrap --text 'Failed to connect to the Emacs daemon!'
 super + q
 	firefox -new-instance -P "School"
+super + control + t
+	 firefox
+super + shift + t
+	alacritty -e ranger
+super + shift + s
+	alacritty -e pulsemixer
+super + Escape + p
+    spotify
+super + shift + p
+	passmenu
+alt + r
+    alacritty -e "newsboat"
+# Launch Emacs Anywhere
+super + shift + e
+     zsh -c \$HOME/.emacs_anywhere/bin/run
 #
 # bspwm hotkeys
 #

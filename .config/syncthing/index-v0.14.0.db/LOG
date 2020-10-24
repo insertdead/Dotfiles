@@ -113,3 +113,41 @@
 21:51:24.227936 table@remove removed @20
 21:51:24.227953 table@remove removed @17
 21:51:24.227967 table@remove removed @16
+=============== Oct 19, 2020 (EDT) ===============
+14:41:38.728458 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:41:38.728873 version@stat F·[0 1] S·1KiB[0B 1KiB] Sc·[0.00 0.00]
+14:41:38.728889 db@open opening
+14:41:38.728922 journal@recovery F·1
+14:41:38.729324 journal@recovery recovering @27
+14:41:38.735126 memdb@flush created L0@30 N·90 S·1KiB "\x00\x00\x00..dbx,v173":"\x0e\x00\x00..dbx,d171"
+14:41:38.735363 version@stat F·[1 1] S·3KiB[1KiB 1KiB] Sc·[0.25 0.00]
+14:41:38.749935 db@janitor F·5 G·1
+14:41:38.749950 db@janitor removing table-26
+14:41:38.749973 db@open done T·21.080424ms
+14:42:38.752152 memdb@flush N·40 S·3KiB
+14:42:38.765454 memdb@flush created L0@34 N·40 S·1KiB "\x00\x00\x00..ons,v196":"\x0e\x00\x00..dbx,d210"
+14:42:38.765537 version@stat F·[2 1] S·4KiB[3KiB 1KiB] Sc·[0.50 0.00]
+14:42:38.770317 memdb@flush committed F·1 T·18.111338ms
+14:42:38.770399 journal@remove removed @31
+14:42:38.770431 table@compaction range L-1 "":""
+14:42:38.770486 table@compaction L0·2 -> L1·1 S·4KiB Q·228
+14:42:38.776130 table@build created L1@35 N·61 S·2KiB "\x00\x00\x00..ons,v196":"\x0e\x00\x00..key,v77"
+14:42:38.776237 version@stat F·[0 1] S·2KiB[0B 2KiB] Sc·[0.00 0.00]
+14:42:38.781482 table@compaction committed F-2 S-2KiB Ke·0 D·108 T·10.959303ms
+14:42:38.781637 table@remove removed @34
+14:42:38.781702 table@remove removed @29
+14:45:10.182095 db@close closing
+14:45:10.182262 db@close done T·157.614µs
+=============== Oct 19, 2020 (EDT) ===============
+14:45:10.229866 log@legend F·NumFile S·FileSize N·Entry C·BadEntry B·BadBlock Ke·KeyError D·DroppedEntry L·Level Q·SeqNum T·TimeElapsed
+14:45:10.230014 version@stat F·[0 1] S·2KiB[0B 2KiB] Sc·[0.00 0.00]
+14:45:10.230024 db@open opening
+14:45:10.230081 journal@recovery F·1
+14:45:10.230509 journal@recovery recovering @33
+14:45:10.236046 memdb@flush created L0@36 N·1 S·136B "\nla..ime,v229":"\nla..ime,v229"
+14:45:10.236364 version@stat F·[1 1] S·2KiB[136B 2KiB] Sc·[0.25 0.00]
+14:45:10.249719 db@janitor F·5 G·1
+14:45:10.249739 db@janitor removing table-30
+14:45:10.249813 db@open done T·19.78414ms
+15:05:36.958018 db@close closing
+15:05:36.958170 db@close done T·151.075µs

@@ -1,0 +1,156 @@
+# mbsyncrc based on
+# http://www.ict4g.net/adolfo/notes/2014/12/27/EmacsIMAP.html
+# ACCOUNT INFORMATION
+IMAPAccount Google-gmail
+# Address to connect to
+Host imap.gmail.com
+User madsci483@gmail.com
+PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d ~/.password-store/Mail-clients/addresses/madsci483@gmail.com.mu.gpg"
+AuthMechs LOGIN
+SSLType IMAPS
+SSLVersions TLSv1.2
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+# THEN WE SPECIFY THE LOCAL AND REMOTE STORAGE
+# - THE REMOTE STORAGE IS WHERE WE GET THE MAIL FROM (E.G., THE
+#   SPECIFICATION OF AN IMAP ACCOUNT)
+# - THE LOCAL STORAGE IS WHERE WE STORE THE EMAIL ON OUR COMPUTER
+
+# REMOTE STORAGE (USE THE IMAP ACCOUNT SPECIFIED ABOVE)
+IMAPStore Google-gmail-remote
+Account Google-gmail
+
+# LOCAL STORAGE (CREATE DIRECTORIES with mkdir -p ~/Maildir/Google-gmail)
+MaildirStore Google-gmail-local
+Path ~/Mail/gmail/
+Inbox ~/Mail/gmail/INBOX
+# REQUIRED ONLY IF YOU WANT TO DOWNLOAD ALL SUBFOLDERS; SYNCING SLOWS DOWN
+# SubFolders Verbatim
+
+# CONNECTIONS SPECIFY LINKS BETWEEN REMOTE AND LOCAL FOLDERS
+#
+# CONNECTIONS ARE SPECIFIED USING PATTERNS, WHICH MATCH REMOTE MAIl
+# FOLDERS. SOME COMMONLY USED PATTERS INCLUDE:
+#
+# 1 "*" TO MATCH EVERYTHING
+# 2 "!DIR" TO EXCLUDE "DIR"
+# 3 "DIR" TO MATCH DIR
+#
+Channel Google-gmail-inbox
+Master :Google-gmail-remote:
+Slave :Google-gmail-local:
+Patterns "INBOX"
+Create Both
+Expunge Both
+SyncState *
+
+Channel Google-gmail-trash
+Master :Google-gmail-remote:"[Gmail]/Bin"
+Slave :Google-gmail-local:"[gmail].Bin"
+Create Both
+Expunge Both
+SyncState *
+
+Channel Google-gmail-sent
+Master :Google-gmail-remote:"[Gmail]/Sent Mail"
+Slave :Google-gmail-local:"[gmail].Sent Mail"
+Create Both
+Expunge Both
+SyncState *
+
+Channel Google-gmail-starred
+Master :Google-gmail-remote:"[Gmail]/Starred"
+Slave :Google-gmail-local:"[gmail].Starred"
+Create Both
+Expunge Both
+SyncState *
+
+# GROUPS PUT TOGETHER CHANNELS, SO THAT WE CAN INVOKE
+# MBSYNC ON A GROUP TO SYNC ALL CHANNELS
+#
+# FOR INSTANCE: "mbsync gmail" GETS MAIL FROM
+# "gmail-inbox", "gmail-sent", and "gmail-trash"
+#
+Group Google-gmail
+Channel Google-gmail-inbox
+Channel Google-gmail-sent
+Channel Google-gmail-trash
+Channel Google-gmail-all
+Channel Google-gmail-starred
+
+## ================================================================================
+
+# ACCOUNT INFORMATION
+IMAPAccount Madsci-outlook
+# Address to connect to
+Host outlook.office365.com
+User madsci@outlook.com
+PassCmd "gpg2 -q --for-your-eyes-only --no-tty -d ~/.password-store/Mail-clients/addresses/madsci@outlook.com.mu.gpg"
+AuthMechs LOGIN
+SSLType IMAPS
+SSLVersions TLSv1.2
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+#Specifying location of local and remote storage
+## Remote storage
+IMAPStore Madsci-outlook-remote
+Account Madsci-outlook
+
+## Local storage
+MaildirStore Madsci-outlook-local
+Path ~/Mail/madsci-outlook/
+Inbox ~/Mail/madsci-outlook/Inbox
+
+# Connections, basically translate the folder names from the remote mail repo to the local mail repo, or vice-versa
+## INBOX
+Channel Madsci-outlook-inbox
+Master :Madsci-outlook-remote:"Inbox"
+Slave :Madsci-outlook-local:"inbox"
+Create Both
+Expunge Both
+Syncstate *
+
+## Trash
+Channel Madsci-outlook-trash
+Master :Madsci-outlook-remote:"Deleted"
+Slave :Madsci-outlook-local:"trash"
+Create Both
+Expunge Both
+SyncState *
+
+## Sent
+Channel Madsci-outlook-sent
+Master :Madsci-outlook-remote:"Sent"
+Slave :Madsci-outlook-local:"sent"
+Create Both
+Expunge Both
+SyncState *
+
+## Archive/Important
+Channel Madsci-outlook-important
+Master :Madsci-outlook-remote:"Archive"
+Slave :Madsci-outlook-local:"important"
+Create Both
+Expunge Both
+SyncState *
+
+## Drafts
+Channel Madsci-outlook-drafts
+Master :Madsci-outlook-remote:"Drafts"
+Slave :Madsci-outlook-local:"drafts"
+Create Both
+Expunge Both
+SyncState *
+
+## Spam (just in case there is a mixup)
+#Channel Madsci-outlook-spam
+#Master :Madsci-outlook-remote:"Junk"
+#Slave :Madsci-outlook-local:"spam"
+
+# Groups that put the channels together, so we can invoke mbsync on a group to sync all channels in the group
+# Example: mbsync gmail will sync all gmail accs and mbsync outlook will sync all outlook accs
+Group Madsci-outlook
+Channel Madsci-outlook-inbox
+Channel Madsci-outlook-sent
+Channel Madsci-outlook-trash
+Channel Madsci-outlook-important

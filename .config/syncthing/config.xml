@@ -63,6 +63,36 @@
         <caseSensitiveFS>false</caseSensitiveFS>
         <junctionsAsDirs>false</junctionsAsDirs>
     </folder>
+    <folder id="voldu-4jaqg" label="Pictures" path="~/voldu-4jaqg" type="sendreceive" rescanIntervalS="3600" fsWatcherEnabled="true" fsWatcherDelayS="10" ignorePerms="false" autoNormalize="true">
+        <filesystemType>basic</filesystemType>
+        <device id="LP3TH2Q-QHEBUXY-SB5KADQ-RPAFG7D-ILSINGV-PYS2Y5P-BPO7GYI-XPPGAQD" introducedBy=""></device>
+        <device id="5B4LQY6-VQBPFMO-TIEIP5F-OCB2UWB-CADOZMS-VHHHXAG-S3RLC3J-RCN6KQN" introducedBy=""></device>
+        <minDiskFree unit="">0</minDiskFree>
+        <versioning>
+            <cleanupIntervalS>0</cleanupIntervalS>
+        </versioning>
+        <copiers>0</copiers>
+        <pullerMaxPendingKiB>0</pullerMaxPendingKiB>
+        <hashers>0</hashers>
+        <order>random</order>
+        <ignoreDelete>false</ignoreDelete>
+        <scanProgressIntervalS>0</scanProgressIntervalS>
+        <pullerPauseS>0</pullerPauseS>
+        <maxConflicts>-1</maxConflicts>
+        <disableSparseFiles>false</disableSparseFiles>
+        <disableTempIndexes>false</disableTempIndexes>
+        <paused>false</paused>
+        <weakHashThresholdPct>25</weakHashThresholdPct>
+        <markerName>.stfolder</markerName>
+        <copyOwnershipFromParent>false</copyOwnershipFromParent>
+        <modTimeWindowS>0</modTimeWindowS>
+        <maxConcurrentWrites>2</maxConcurrentWrites>
+        <disableFsync>false</disableFsync>
+        <blockPullOrder>standard</blockPullOrder>
+        <copyRangeMethod>standard</copyRangeMethod>
+        <caseSensitiveFS>false</caseSensitiveFS>
+        <junctionsAsDirs>false</junctionsAsDirs>
+    </folder>
     <device id="JMK3IBU-GFCN2EF-XFYFX4A-J4FM6P5-SASU62Q-DL2B5OA-5SJDRIC-QFMOQQP" name="PC" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
         <address>dynamic</address>
         <paused>false</paused>
@@ -79,6 +109,14 @@
         <maxRecvKbps>0</maxRecvKbps>
         <maxRequestKiB>0</maxRequestKiB>
     </device>
+    <device id="5B4LQY6-VQBPFMO-TIEIP5F-OCB2UWB-CADOZMS-VHHHXAG-S3RLC3J-RCN6KQN" name="Madsci-phone" compression="metadata" introducer="false" skipIntroductionRemovals="false" introducedBy="">
+        <address>dynamic</address>
+        <paused>false</paused>
+        <autoAcceptFolders>true</autoAcceptFolders>
+        <maxSendKbps>0</maxSendKbps>
+        <maxRecvKbps>0</maxRecvKbps>
+        <maxRequestKiB>0</maxRequestKiB>
+    </device>
     <gui enabled="true" tls="false" debugging="false">
         <address>127.0.0.1:8080</address>
         <password>$2b$12$KykWBOaaFGW75JuWQGi50ujOQb5JaoyNJDxW3c/4zSHnAhX5Rl/zS</password>
@@ -89,7 +127,7 @@
     <options>
         <listenAddress>default</listenAddress>
         <globalAnnounceServer>default</globalAnnounceServer>
-        <globalAnnounceEnabled>true</globalAnnounceEnabled>
+        <globalAnnounceEnabled>false</globalAnnounceEnabled>
         <localAnnounceEnabled>true</localAnnounceEnabled>
         <localAnnouncePort>21027</localAnnouncePort>
         <localAnnounceMCAddr>[ff12::8384]:21027</localAnnounceMCAddr>
@@ -131,5 +169,6 @@
         <stunServer>default</stunServer>
         <databaseTuning>auto</databaseTuning>
         <maxConcurrentIncomingRequestKiB>0</maxConcurrentIncomingRequestKiB>
+        <announceLANAddresses>true</announceLANAddresses>
     </options>
 </configuration>

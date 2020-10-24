@@ -3,8 +3,12 @@
 #terminate existing bars
 killall -q polybar
 
-#Launch bar
-echo "---" | tee -a /tmp/polybar1.log
-polybar bar1 >>/tmp/polybar1.log 2>&1 & disown
+if type "xrandr"; then
+  for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
+    MONITOR=$m polybar --reload example &
+  done
+else
+  polybar --reload example &
+fi
 
 echo "Bar launched"

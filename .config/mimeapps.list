@@ -1,7 +1,16 @@
 [Default Applications]
 x-scheme-handler/msteams=teams.desktop
+inode/directory=thunar.desktop
+video=mpv.desktop
+text=emacs.desktop
+image=sxiv.desktop
+image/png=sxiv.desktop
+application/pdf=org.pwmt.zathura.desktop
 
 [Added Associations]
-application/pdf=org.pwmt.zathura.desktop;gimp.desktop;
-image/png=sxiv.desktop;
+application/pdf=org.pwmt.zathura.desktop;firefox.desktop;gimp.desktop;
+image/png=gimp.desktop;rx.desktop;sxiv.desktop;
 image/jpeg=sxiv.desktop;
+text/markdown=firefox.desktop;
+application/x-java-archive=jshell-java-openjdk.desktop;
+application/x-desktop=emacs.desktop;

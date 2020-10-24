@@ -18,7 +18,7 @@ set showmatch
 set incsearch
 set hlsearch
 " keycombo to remove highlight as soon as pressed enter
-nnoremap <return> :nohlsearch<CR>
+"nnoremap <return> :nohlsearch<CR>
 "Code folding + keybind
 set foldenable
 set foldlevelstart=10
@@ -51,9 +51,16 @@ Plug 'tpope/vim-fugitive'
 Plug 'joshdick/onedark.vim'
 Plug 'lervag/vimtex'
 Plug 'arcticicestudio/nord-vim'
+Plug 'sirver/ultisnips'
+Plug 'w0rp/ale'
+Plug 'ludovicchabant/vim-gutentags'
+Plug 'goballooning/vim-live-latex-preview'
+"Plug 'xuhdev/vim-latex-live-preview', {'for': 'tex'}
 call plug#end()
 " Set TeX flavour
 let g:tex_flavor = 'latex'
+" Set vimtex viewer
+let g:vimtex_view_method = 'zathura'
 " Theme
 colorscheme nord
 autocmd colorscheme * highlight Normal ctermbg=NONE guibg=NONE

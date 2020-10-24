@@ -1,0 +1,15 @@
+
+xmonad.hs:277:3: error:
+    • Couldn't match expected type ‘(XConfig a0 -> XConfig a0) -> m b’
+                  with actual type ‘IO ()’
+    • The first argument of ($) takes one argument,
+      but its type ‘IO ()’ has none
+      In a stmt of a 'do' block: xmonad defaults $ docks
+      In the expression:
+        do xmproc <- spawnPipe
+                       "xmobar -x 0 /home/madsci/.config/xmobar/xmobarrc.hs"
+           xmonad defaults $ docks
+    • Relevant bindings include main :: m b (bound at xmonad.hs:275:1)
+    |
+277 |   xmonad defaults $ docks
+    |   ^^^^^^^^^^^^^^^^^^^^^^^

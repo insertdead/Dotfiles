@@ -1,16 +1,35 @@
 #! /bin/sh
-
+myTerm="alacritty"
+# idk some java stuff
+export AWT_TOOLKIT=MToolkit
 #Autostart things (Set background, start picom, etc)
 pgrep -x sxhkd > /dev/null || sxhkd &
 picom --config $HOME/.config/picom/picom.conf &
 nitrogen --restore &
-wal -nR &
-polybar -c $HOME/.config/polybar/config/config example &
-redshift -b 1.0:0.8 -t 6500:5000 &
+wal -i $HOME/Images/wallpapers && xrdb -merge $HOME/.config/Xresources &
+$HOME/.config/polybar/launch.sh &
 unclutter --timeout 15 &
-keepassxc &
+devmon &
+$myTerm -e "newsboat"
+# dbus-launch /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+emacs --fg-daemon=madsci-emacsd &
+xautolock -time 10 -locker "slock -m "$(date "+%a %d, %I:%M%p")"" &
+remap &
 #Tag/Tab config
-bspc monitor -d I II III IV V VI VII VIII IX X
+# run script that check which monitors are plugged in and configure bspwm accordingly.
+bspc monitor eDP-1 -d I II III IV V VI VII VIII IX X
+# bspc monitor HDMI-1 -d VI VII VIII IX X
+#. "$HOME/.config/bspwm/check_monitors.sh"
+
+# Colors
+## Source colors
+. "$HOME/.cache/wal/colors.sh"
+# Set the border colors.
+bspc config normal_border_color "$color1"
+bspc config active_border_color "$color2"
+bspc config focused_border_color "$color15"
+# Use the line below if you are on bspwm >= 0.9.4
+bspc config presel_feedback_color "$color1"
 
 #Border config
 bspc config border_width           2
