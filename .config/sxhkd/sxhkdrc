@@ -5,7 +5,12 @@
 # terminal emulator
 super + Return
 	alacritty
-# Brightness & Sound control
+# Media Control
+## Music/Video Control
+XF86AudioPlay
+    mpc toggle
+XF86AudioNext
+	mpc next
 ## Brightness
 XF86MonBrightnessUp
 	brightnessctl s 5%+
@@ -49,9 +54,9 @@ super + Escape
 	pkill -USR1 -x sxhkd
 #Program launching hotkeys
 super + control + w
-	firefox -new-window
-super + w
 	qutebrowser
+super + w
+	firefox -new-window
 super + e
 	emacsclient --socket-name=madsci-emacsd -c -n || zenity --error --no-wrap --text 'Failed to connect to the Emacs daemon!'
 super + q

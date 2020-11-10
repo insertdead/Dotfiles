@@ -3,6 +3,7 @@ myTerm="alacritty"
 # idk some java stuff
 export AWT_TOOLKIT=MToolkit
 #Autostart things (Set background, start picom, etc)
+transmission-daemon
 pgrep -x sxhkd > /dev/null || sxhkd &
 picom --config $HOME/.config/picom/picom.conf &
 nitrogen --restore &
@@ -15,6 +16,9 @@ $myTerm -e "newsboat"
 emacs --fg-daemon=madsci-emacsd &
 xautolock -time 10 -locker "slock -m "$(date "+%a %d, %I:%M%p")"" &
 remap &
+## bloated stuff that lookk nice
+volctl &
+blueman-tray &
 #Tag/Tab config
 # run script that check which monitors are plugged in and configure bspwm accordingly.
 bspc monitor eDP-1 -d I II III IV V VI VII VIII IX X

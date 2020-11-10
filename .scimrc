@@ -1,0 +1,3 @@
+set overlap
+set autobackup 300
+set filename_with_mode 1

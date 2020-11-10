@@ -6,6 +6,8 @@ text=emacs.desktop
 image=sxiv.desktop
 image/png=sxiv.desktop
 application/pdf=org.pwmt.zathura.desktop
+text/xml=javaws.desktop
+application/x-java-jnlp-file=userapp-javaws-R326S0.desktop
 
 [Added Associations]
 application/pdf=org.pwmt.zathura.desktop;firefox.desktop;gimp.desktop;
@@ -13,4 +15,7 @@ image/png=gimp.desktop;rx.desktop;sxiv.desktop;
 image/jpeg=sxiv.desktop;
 text/markdown=firefox.desktop;
 application/x-java-archive=jshell-java-openjdk.desktop;
-application/x-desktop=emacs.desktop;
+application/x-desktop=nvim.desktop;emacs.desktop;
+application/x-java-jnlp-file=userapp-javaws-R326S0.desktop;javaws.desktop;firefox.desktop;
+
+[Removed Associations]
