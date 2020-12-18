@@ -53,3 +53,6 @@
 (package! elfeed)
 (package! emojify)
 (package! emms)
+(package! exwm)
+(package! org-ref)
+(package! synonyms)

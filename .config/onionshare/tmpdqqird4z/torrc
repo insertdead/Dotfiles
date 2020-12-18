@@ -1,9 +1,0 @@
-DataDirectory /home/madsci/.config/onionshare/tmpdqqird4z
-SocksPort 25768
-CookieAuthentication 1
-CookieAuthFile /home/madsci/.config/onionshare/tmpdqqird4z/cookie
-AvoidDiskWrites 1
-Log notice stdout
-GeoIPFile /usr/share/tor/geoip
-GeoIPv6File /usr/share/tor/geoip6
-ControlSocket /home/madsci/.config/onionshare/tmpdqqird4z/control_socket

@@ -1,42 +1,35 @@
 #! /bin/sh
 myTerm="alacritty"
-# idk some java stuff
-export AWT_TOOLKIT=MToolkit
 #Autostart things (Set background, start picom, etc)
-transmission-daemon
 pgrep -x sxhkd > /dev/null || sxhkd &
-picom --config $HOME/.config/picom/picom.conf &
 nitrogen --restore &
-wal -i $HOME/Images/wallpapers && xrdb -merge $HOME/.config/Xresources &
+pacwall -ug
 $HOME/.config/polybar/launch.sh &
-unclutter --timeout 15 &
-devmon &
-$myTerm -e "newsboat"
-# dbus-launch /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-emacs --fg-daemon=madsci-emacsd &
-xautolock -time 10 -locker "slock -m "$(date "+%a %d, %I:%M%p")"" &
-remap &
-## bloated stuff that lookk nice
 volctl &
 blueman-tray &
+$myTerm -e "newsboat" &
+xautolock -time 10 -locker "slock -m "$(date "+%a %d, %I:%M%p")"" &
+
 #Tag/Tab config
+
 # run script that check which monitors are plugged in and configure bspwm accordingly.
 bspc monitor eDP-1 -d I II III IV V VI VII VIII IX X
+
 # bspc monitor HDMI-1 -d VI VII VIII IX X
 #. "$HOME/.config/bspwm/check_monitors.sh"
 
 # Colors
 ## Source colors
-. "$HOME/.cache/wal/colors.sh"
+# . "$HOME/.cache/wal/colors.sh"
 # Set the border colors.
-bspc config normal_border_color "$color1"
-bspc config active_border_color "$color2"
+bspc config normal_border_color "#2e3440"
+bspc config active_border_color "#d8dee9"
 bspc config focused_border_color "$color15"
 # Use the line below if you are on bspwm >= 0.9.4
 bspc config presel_feedback_color "$color1"
 
 #Border config
-bspc config border_width           2
+bspc config border_width           3
 bspc config window_gap            12
 
 #Layouts
@@ -50,4 +43,6 @@ bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
-bspc rule -a Emacs state=tiled 
+bspc rule -a Emacs state=tiled
+# quickterm (for pulling up a terminal to quickly writing some commands w/out taking up tiling space)
+bspc rule -a quickterm sticky=on state=floating

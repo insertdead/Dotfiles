@@ -13,16 +13,13 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
-(setq user-full-name "Madsci"
+(setq user-full-name "Mathieu Roiné-Watson"
       user-mail-address "Madsci@outlook.com")
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 (setq doom-theme 'doom-nord)
-(setq doom-variable-pitch-font (font-spec :family "Ubuntu Nerd Font" :size 15)
-      doom-big-font (font-spec :family "Ubuntu Nerd Font" :size 24))
-
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/Documents/org/")
@@ -96,10 +93,14 @@
 ;; font string. You generally only need these two:
 ;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
 ;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
+;;
+(setq doom-font (font-spec :family "JetBrainsMono Nerd Font" :size 14)
+      doom-big-font (font-spec :family "Ubuntu Nerd Font" :size 24))
+;;
 ;;Flyspell stuff w/ switching between dicts
 (with-eval-after-load "ispell" (setq ispell-program-name "ispell")
-                      (setq ispell-dictionary"en_CA")
-                      (setq ispell-alternate-dictionary "fr_FR"))
+                      (setq ispell-dictionary "fr_FR")
+                      (setq ispell-alternate-dictionary "en_CA"))
 ;;
 ;; Here are some additional functions/macros that could help you configure Doom:
 ;;
@@ -117,3 +118,45 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+;;
+;; Org-mode export templates/packages
+;; (dolist (add-to-list ))
+(add-to-list 'org-latex-packages-alist
+             '("citestyle=numeric,bibstyle=numeric,hyperref=true,backref=true,maxcitenames=3,url=true,backend=biber" "biblatex" t ))
+(add-to-list 'org-latex-packages-alist
+             '("french=guillemets,english=american,spanish=spanish" "csquotes" ))
+(add-to-list 'org-latex-packages-alist
+             '("" "babel"))
+;;
+;; Load EXWM Config
+;;(require `exwm)
+;;(load ~/.config/exwm/config.el)
+;;
+;; load icicle installer elisp file
+(load-file "~/Documents/Dev/icicles-install.el")
+;;
+;; org-ref config
+(setq reftex-default-bibliography '("~/Documents/Bibliography/references.bib"))
+;; see org-ref documentation for use of these vars
+(setq org-ref-bibliography-notes "~/Documents/Bibliography/notes.org"
+      org-ref-default-bibliography '("~/Documents/Bibliography/references.bib")
+      org-ref-pdf-directory "~/Documents/Bibliography/bibtex-pdfs/")
+;; Citation-key completion
+(setq bibtex-completion-bibliography "~/Documents/Bibliography/references.bib"
+      bibtex-completion-library-path "~/Documents/Bibliography/bibtex-pdfs"
+      bibtex-completion-notes-path "~/Documents/Bibliography/helm-bibtex-notes")
+;; open pdf with system pdf viewer (zathura)
+(setq bibtex-completion-pdf-open-function
+      (lambda (fpath)
+        (start-process "open" "*open*" "open" fpath)))
+;; update org-latex-pdf-process to use biblatex/biber
+(setq org-latex-pdf-process (list "latexmk -shell-escape -bibtex -lualatex -f %f"))
+;; set bib compiler for org
+(setq org-latex-bib-compiler "biber")
+;;
+;; Add wc-mode and wc-mode keybinding
+(add-to-list 'load-path "~/.emacs.d/modules/ui/wc-mode/")
+(require 'wc-mode)
+(global-set-key "\C-cw" 'wc-mode)
+;; Set default hyperref settings
+(setq org-latex-hyperref-template "\\hypersetup{\n pdfauthor={%a},\n pdftitle={%t},\n pdfkeywords={%k},\n pdfsubject={%d},\n pdfcreator={%c}, \n pdflang={%L},\n colorlinks,\n linkcolor={black},\n citecolor={blue!50!black},\n urlcolor={blue!80!black}}\n")

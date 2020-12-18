@@ -5,6 +5,8 @@
 # terminal emulator
 super + Return
 	alacritty
+super + shift + Return
+    alacritty --class quickterm
 # Media Control
 ## Music/Video Control
 XF86AudioPlay
@@ -45,29 +47,32 @@ super + shift + @space
 # Launch Calcurse
 super + a
 	alacritty calcurse
-# Screenshot
+# Teiler
 super + control + s
-	export time=$(date)
-	import Image/screenshots/${time}.png
+	teiler
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
 #Program launching hotkeys
 super + control + w
-	qutebrowser
-super + w
 	firefox -new-window
+super + w
+	brave
 super + e
 	emacsclient --socket-name=madsci-emacsd -c -n || zenity --error --no-wrap --text 'Failed to connect to the Emacs daemon!'
 super + q
 	firefox -new-instance -P "School"
+super + shift + t
+     pcmanfm
 super + control + t
 	 firefox
 super + shift + t
 	alacritty -e ranger
 super + shift + s
 	alacritty -e pulsemixer
-super + Escape + p
+super + p
+    alacritty -e "ncmpcpp"
+super + control + p
     spotify
 super + shift + p
 	passmenu
@@ -175,7 +180,7 @@ super + alt + {h,j,k,l}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # contract a window by moving one of its side inward
-super + alt + shift + {h,j,k,l}
+super + control + shift + {h,j,k,l}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # move a floating window

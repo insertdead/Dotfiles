@@ -1,7 +1,0 @@
-2020/09/07-00:09:38.684 420f Reusing MANIFEST /home/madsci/.config/Signal/IndexedDB/file__0.indexeddb.leveldb/MANIFEST-000001
-2020/09/07-00:09:38.684 420f Recovering log #4
-2020/09/07-00:09:38.684 420f Reusing old log /home/madsci/.config/Signal/IndexedDB/file__0.indexeddb.leveldb/000004.log 
-2020/09/07-00:09:38.958 4213 Level-0 table #8: started
-2020/09/07-00:09:38.964 4213 Level-0 table #8: 469 bytes OK
-2020/09/07-00:09:38.971 4213 Delete type=0 #4
-2020/09/07-00:09:38.971 4213 Manual compaction at level-0 from '\x00\x02\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x03\x00\x00\x00' @ 0 : 0; will stop at (end)

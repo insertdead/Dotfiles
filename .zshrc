@@ -5,13 +5,13 @@ SAVEHIST=1000
 bindkey -v
 # read colors
 #(cat $HOME/.cache/wal/sequences)
-# set emacs config directory
-export PATH="$HOME/.emacs.d/bin:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.bin:$HOME/.ghcup/bin:$HOME/.cabal/bin:$PATH"
-export EDITOR="emacsclient -nc --socket-name=madsci-emacsd"
-#export SPOTIPY_CLIENT_ID='54fc8d9b85854311a0b6be629d1c47bf'
-#export SPOTIPY_CLIENT_SECRET='f1b71e21c9254a7db6ed3b2ce2bdb7a5'
-#export SPOTIPY_REDIRECT_URI=https://spotifydl.sathyabh.at/
-#export YOUTUBE_DEV_KEY='AIzaSyAZve5s9BK8hx-WvGeNth5sM-BXa3EA9jI'
+# set PATH
+export PATH="$HOME/.emacs.d/bin:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.bin:$HOME/.ghcup/bin:$HOME/.cabal/bin:$HOME/Games/factorio/bin/x64/:$PATH"
+export EDITOR="nvim"
+export SPOTIPY_CLIENT_ID='54fc8d9b85854311a0b6be629d1c47bf'
+export SPOTIPY_CLIENT_SECRET='f1b71e21c9254a7db6ed3b2ce2bdb7a5'
+export SPOTIPY_REDIRECT_URI=https://spotifydl.sathyabh.at/
+export YOUTUBE_DEV_KEY='AIzaSyAZve5s9BK8hx-WvGeNth5sM-BXa3EA9jI'
 # Curl aliases for easy information
 alias weather="curl https://wttr.in; echo"
 alias myip="curl https://ipecho.net/plain; echo"
@@ -30,6 +30,8 @@ alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
 #add flags for safety
 alias cp="cp -i"
+alias rm="trash"
+alias rme="trash-empty"
 #shorten youtube-dl command
 alias ytdl="youtube-dl"
 # Git aliases
@@ -65,8 +67,8 @@ alias tlmgr="tllocalmgr"
 # Connect to home wifi
 alias wifi-connect="connmanctl connect wifi_f8ac65dadce8_66726f67726f736269665f76657232_managed_psk"
 #Prompt
-PROMPT="%(!.#.<) %F{cyan}%*%f | %F{yellow}%n%f@ %U%F{97}%2~%f%u %(!.#.>) "
-RPROMPT="%(?.√.X:%?)"
+#PROMPT="%(!.#.<) %F{cyan}%*%f | %F{yellow}%n%f@ %U%F{97}%2~%f%u %(!.#.>) "
+#RPROMPT="%(?.√.X:%?)"
 # Shell startup commands
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
@@ -116,3 +118,7 @@ zinit light-mode for \
 [ -f "/home/madsci/.ghcup/env" ] && source "/home/madsci/.ghcup/env" # ghcup-env
 alias android-connect="mtpfs -o allow_other /media/GalaxyNexus"
 alias android-disconnect="fusermount -u /media/GalaxyNexus"
+# Starship Prompt
+eval "$(starship init zsh)"
+# startup
+colorscript -r

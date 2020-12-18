@@ -20,7 +20,7 @@
 background = #aa2e3440
 ;background = #222
 background-alt = #444
-foreground = ${xrdb:color7:#222}
+foreground = #e5e9f0
 ;foreground = #dfdfdf
 foreground-alt = #555
 primary = #ffb52a
@@ -233,12 +233,10 @@ icon-play = 
 icon-pause = 
 icon-next = 
 
-label-song-maxlen = 25
+label-song-maxlen = 35
 label-song-ellipsis = true
 
 [module/xbacklight]
-type = internal/xbacklight
-
 format = <label> <bar>
 label = BL
 
