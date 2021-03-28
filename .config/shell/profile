@@ -1,0 +1,99 @@
+#!/bin/zsh 
+
+# Declare ZINIT var
+declare -A ZINIT
+
+# ENV vars are set here
+export PATH="$HOME/.emacs.d/bin:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.bin:$HOME/.ghcup/bin:$HOME/.cabal/bin:$HOME/.nodenv/bin:$HOME/.rubenv/bin:$HOME/.local/share/poetry/bin:$PATH"
+
+unsetopt PROMPT_SP
+
+# Default applications
+export EDITOR="nvim"
+export TERMINAL="alacritty"
+export BROWSER="librewolf"
+export MANPAGER="nvim +Man!"
+
+# ~/ Clean-up:
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc"
+export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" # This line will break some DMs.
+export NOTMUCH_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/notmuch-config"
+export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
+export LESSHISTFILE="-" export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
+export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/shell/inputrc"
+export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
+#export ALSA_CONFIG_PATH="$XDG_CONFIG_HOME/alsa/asoundrc"
+export GNUPGHOME="${XDG_DATA_HOME:-$HOME/.local/share}/gnupg"
+export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefixes/default"
+export KODI_DATA="${XDG_DATA_HOME:-$HOME/.local/share}/kodi"
+export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
+export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
+export ANDROID_SDK_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/android"
+export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
+export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
+export ANSIBLE_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/ansible/ansible.cfg"
+export UNISON="${XDG_DATA_HOME:-$HOME/.local/share}/unison"
+export WEECHAT_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/weechat"
+export MBSYNCRC="${XDG_CONFIG_HOME:-$HOME/.config}/mbsync/config"
+export ELECTRUMDIR="${XDG_DATA_HOME:-$HOME/.local/share}/electrum"
+export POETRY_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/poetry"
+
+export ZINIT[BIN_DIR]="${XDG_DATA_HOME:-$HOME/.local/share}/zinit/bin"
+export ZINIT[HOME_DIR]="${XDG_DATA_HOME:-$HOME/.local/share}/zinit"
+export ZINIT[PLUGINS_DIR]="${XDG_DATA_HOME:-$HOME/.local/share}/zinit/plugins"
+export ZINIT[COMPLETIONS_DIR]="${XDG_DATA_HOME:-$HOME/.local/share}/zinit/completions"
+export ZINIT[SNIPPETS_DIR]="${XDG_DATA_HOME:-$HOME/.local/share}/zinit/snippets"
+export ZINIT[ZCOMPDUMP_PATH]="$ZDOTDIR/zcompdump"
+
+# Other program settings:
+export DICS="/usr/share/stardict/dic/"
+export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
+export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
+export LESS=-R
+export LESSOPEN="| /usr/bin/highlight -O ansi %s 2>/dev/null"
+export QT_QPA_PLATFORMTHEME="gtk2"	# Have QT use gtk2 theme.
+export MOZ_USE_XINPUT2="1"		# Mozilla smooth scrolling/touchpads.
+export AWT_TOOLKIT="MToolkit wmname LG3D"	#May have to install wmname
+export _JAVA_AWT_WM_NONREPARENTING=1	# Fix for Java applications in dwm
+# I have no idea what these do but they break less for me
+# export LESS_TERMCAP_mb="$(printf '%b' '[1;31m')"
+# export LESS_TERMCAP_md="$(printf '%b' '[1;36m')"
+# export LESS_TERMCAP_me="$(printf '%b' '[0m')"
+# export LESS_TERMCAP_so="$(printf '%b' '[01;44;33m')"
+# export LESS_TERMCAP_se="$(printf '%b' '[0m')"
+# export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
+# export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
+
+# History (zsh only)
+export HISTFILE="${XDG_DATA_HOME:-$HOME/.local/share}/history"
+HISTSIZE=1000
+SAVEHIST=1200
+setopt extended_history # record timestamps in history file
+setopt hist_expire_dups_first # Remove duplicates first
+setopt hist_ignore_dups # Ignore duplicates
+setopt hist_ignore_space # Ignore commands that start with space
+setopt INC_APPEND_HISTORY # Append into history file
+setopt HIST_REDUCE_BLANKS
+setopt HIST_IGNORE_ALL_DUPS
+
+# Startup
+#
+# Start X at login
+[ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC"
+
+# *envs (rbenv, nodenv, ghcup)
+[ -f "/home/madsci/.ghcup/env" ] && source "/home/madsci/.ghcup/env" # ghcup-env
+eval "$(nodenv init -)"
+eval "$(rbenv init -)"
+ 
+# Other
+colorscript -r
+
+# source aliases and Xresources
+source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliases"
+xrdb -load "${XDG_CONFIG_HOME:-$HOME/.config}/shell/xresources"
+
+export PATH="$HOME/.poetry/bin:$PATH"

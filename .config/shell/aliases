@@ -1,0 +1,51 @@
+#!/bin/zsh
+
+# Aliases file
+# 
+# Suffix aliases will only be found in .zshrc for compatibility purposes with
+# bash and other POSIX(ish) shells
+
+# Curl aliases for easy information
+alias \
+  weather="curl -s https://wttr.in; echo" \
+  myip="curl -s https://ipecho.net/plain; echo" \
+  crypto="curl -s https://cad.rate.sx; echo"
+#
+#replace ls with exa
+alias \
+  ls="exa -l -a --color=always --git --group-directories-first" \
+  ll="exa -l --colour=always --git -u | egrep '^\.'"
+#grep w/ color
+alias \
+  grep="rg --color=auto" \
+  fgrep="fgrep --color=auto" \
+  egrep="egrep --color=auto"
+
+# flags
+alias \
+  cp="cp -i" \
+  rm="trash" \
+  rme="trash-empty"
+
+# Shorten
+alias \
+  yt="youtube-dl" \
+  dots="dotbare" \
+  scim="sc-im" \
+  vim="nvim" \
+  charge="upower -i /org/freedesktop/UPower/devices/battery_CMB0" \
+  brightness="brightnessctl" \
+  tlmgr="tllocalmgr" \
+  g="git"
+
+# Directory control
+alias \
+  ..="cd .." \
+  ...="cd ../.." \
+  .4="cd ../../.." \
+  .5="cd ../../../.."
+
+#Power control
+alias reboot="doas reboot" \
+  poweroff="doas poweroff" \
+  shutdown="doas shutdown"
