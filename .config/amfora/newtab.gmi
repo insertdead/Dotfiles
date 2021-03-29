@@ -1,0 +1,18 @@
+⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿
+
+     ⠿⠿⠿    ⠿⠿   ⠿⠿⠿⠿⠿⠿⠿   ⠿     ⠿      ⠿⠿⠿⠿⠿⠿⠿⠿    ⠿⠿⠿    ⠿⠿⠿⠿
+     ⠿⠿ ⠿   ⠿⠿   ⠿⠿        ⠿     ⠿         ⠿⠿      ⠿   ⠿   ⠿   ⠿
+     ⠿⠿  ⠿  ⠿⠿   ⠿⠿⠿⠿      ⠿  ⠿  ⠿         ⠿⠿      ⠿⠿⠿⠿⠿   ⠿⠿⠿⠿⠿
+     ⠿⠿   ⠿ ⠿⠿   ⠿⠿        ⠿  ⠿  ⠿         ⠿⠿      ⠿   ⠿   ⠿    ⠿
+     ⠿⠿    ⠿⠿⠿   ⠿⠿⠿⠿⠿⠿⠿    ⠿⠿ ⠿⠿          ⠿⠿      ⠿   ⠿   ⠿⠿⠿⠿⠿
+
+⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿⠿
+
+# Links
+=> gemini://gus.guru/search Search
+
+=> gemini://gemini.circumlunar.space/docs/ Gemini Documentation
+=> gemini://gemini.ctrl-c.club CTRL-C Club (Pubnix)
+=> gemini://makeworld.gq Amfora dev
+=> gemini://makeworld.gq/amfora-wiki/ Amfora Wiki
+=> gemini://tilde.club/ tilde.club

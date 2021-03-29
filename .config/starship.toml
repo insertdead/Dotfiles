@@ -1,0 +1,106 @@
+# Don't add a newline at the start of the prompt
+add_newline = true
+# Global format for prompt
+format = "$all"
+# format = """
+# $git_ $git_commit $git_status
+# $username[@](cyan)$hostname $directory$character """
+
+# Replace the "❯" symbol and its color with the desired one
+[character]
+success_symbol = "[❯](bold green)"
+
+# Do or don't break the prompt (useful to keep enabled if there are many modules activated)
+[line_break]
+disabled = false
+
+# Directory
+[directory]
+truncation_length = 2
+style = "purple"
+read_only = ""
+[aws]
+symbol = " "
+
+# Git
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "bold red"
+diverged = ""
+untracked = "?"
+stashed = ""
+modified = ""
+staged = ""
+renamed = ""
+deleted = ""
+# Symbols & stuff
+[battery]
+full_symbol = ""
+charging_symbol = ""
+discharging_symbol = ""
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[docker]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[memory_usage]
+symbol = " "
+
+[nim]
+symbol = " "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[package]
+symbol = " "
+
+[perl]
+symbol = " "
+
+[php]
+symbol = " "
+
+[python]
+symbol = " "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[swift]
+symbol = "ﯣ "
