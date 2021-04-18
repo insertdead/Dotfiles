@@ -1,3 +1,4 @@
+! vim: filetype=xdefaults
 ! Copyright (c) 2016-present Arctic Ice Studio <development@arcticicestudio.com>
 ! Copyright (c) 2016-present Sven Greb <code@svengreb.de>
 
@@ -49,8 +50,5 @@
 ! dwm
 !
 ! requires xresources patch for dwm
-#define browser librewolf
-#define browserextra librewolf -p noprivacy
-
-dwm.browser: browser
-dwm.browserextra: browserextra
+dwm.browser: librewolf
+dwm.browserextra: librewolf -p noprivacy

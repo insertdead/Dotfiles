@@ -28,6 +28,7 @@ source "$ZINIT[BIN_DIR]/zinit.zsh"
 autoload -Uz _zinit
 
 # Ignore case for completion
+autoload -U bashcompinit; bashcompinit
 autoload -U compinit; compinit
 zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' '+m:{A-Z}={a-z}'
 

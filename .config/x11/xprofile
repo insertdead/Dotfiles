@@ -1,33 +1,49 @@
+# vim: filetype=sh
 # Set some settings
 export XDG_CONFIG_HOME=$HOME/.config
 export AWT_TOOLKIT=MToolkit
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 export WEECHAT_HOME=$XDG_CONFIG_HOME/weechat
 export TERMINAL=alacritty
+
 # set root image (wallpaper)
 hsetroot -fill ~/.cache/wallpaper.jpg || hsetroot -fill ~/.cache/wallpaper.png
+
 # daemon to set graphical settings (GTK, cursor, etc)
 xsettingsd &
+
+# Merge xresources file
+xrdb -merge ~/.config/x11/xresources
+
 # notifications
 dunst &
+
+# Start emacs daemon 
+emacs --daemon &
+
 # jonaburg's fork of picom - has some fancy animation stuff 'n all that.
 # If your computer has performance issues running this, replace it with
 # xcompmgr.
 picom --config "$HOME/.config/picom/picom.conf" &
-# xcompmgr -c &
+# xcompmgr &
+
 # Remove cursor when idle
 unclutter --timeout 1 &
+
 # Start gpg-agent - I don't remember why I needed it, but it's there.
 gpg-agent --daemon &
-# Graphical polkit auth thing - you need it when to authenticate as sudo in
+
+# Graphical polkit auth thing - you need it when to authenticate as root in
 # graphical programs.
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+# /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
 # auto-mount disks n stuff
 devmon &
+
 # pass for browsers - comment if you don't have the program
 browserpass &
+
 # screensaver lockscreen
-light-locker --lock-on-suspend --lock-on-lid
 remap &
 # Start Pulseaudio (audio)
 pulseaudio &

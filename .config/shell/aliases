@@ -36,7 +36,8 @@ alias \
   charge="upower -i /org/freedesktop/UPower/devices/battery_CMB0" \
   brightness="brightnessctl" \
   tlmgr="tllocalmgr" \
-  g="git"
+  g="git" \
+  em="emacslient -nw|emacs -nw"
 
 # Directory control
 alias \

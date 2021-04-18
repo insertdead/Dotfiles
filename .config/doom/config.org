@@ -1,0 +1,106 @@
+#+TITLE: Doom Emacs Config
+#+AUTHOR: insertdead <mdsc0111@tuta.io>
+
+*   General configuration
+This is just to set some basic things in emacs, such as user name, email, theme, etc.
+
+If you are going to use this config, you should replace these with your own name and email, as it's not only useful for email clients such as ~mu4e~, but also useful for ~GPG~ configuration, and thus for signing git commits with ~magit~, Emacs' git client.
+#+begin_src elisp
+(setq user-full-name "insertdead"
+      user-mail-address "mdsc@disroot.org")
+#+end_src
+
+**   Font and theme
+The Doom Emacs distribution comes prepackaged with many color themes to use.
+My favorite color theme is the [[https://nordtheme.com][Nord]] color scheme. It's easy on the eyes and has n*ice* colors.
+However, you may change the theme to any other theme packaged with Doom, by changing the ~doom-theme~ variable to anything else, like ~doom-one~, which is the default theme in the /Atom/ editor.
+
+For the font, you can choose any font you currently have installed on your system.
+I recommend choosing a =monospaced= font, and choose a font size that is comfortable.
+You can change the font by changing the string in ~doom-font~.
+
+#+begin_src elisp
+(setq doom-font (font-spec :family "Iosevka Nerd Font" :size 13) ; :weight 'semi-light
+      doom-variable-pitch-font (font-spec :family "Droid Sans" :size 14))
+
+(setq doom-theme 'doom-nord)
+#+end_src
+
+*   Org configuration
+Here, we configure ~org-mode~, one of the most invaluable tools in Emacs.
+We set the default directory for ~org~ files, the path in which ~org-noter~, a useful package for annotating documents with ~org-mode~, and the default notes file.
+#+begin_src elisp
+(setq org-directory "~/org/")
+(setq org-noter-notes-search-path '("~/Documents/notes"))
+(setq org-default-notes-file "~/org/tasks.org")
+#+end_src
+
+**  ~org-latex~ configuration
+Here we define some default settings for ~org-mode~'s LaTeX exporter, like the command used to compile org documents into PDFs and the bib compiler.
+
+The default settings for ~hyperref~ make links look ugly, so I can change that here.
+However, the way you do it is rather clunky, because the of way multi-line strings are in Emacs lisp.
+#+begin_src elisp
+(setq org-latex-pdf-process (list "latexmk -shell-escape -%latex -bibtex -f %f"))
+(setq org-latex-bib-compiler "biber")
+(setq bibtex-dialect "biblatex")
+
+(setq org-latex-hyperref-template "\\hypersetup{\
+    pdfauthor={%a},\
+    pdftitle={%t},\
+    pdfkeywords={%k},\
+    pdfsubject={%d},\
+    pdfcreator={%c},\
+    pdflang={%L},\
+    colorlinks,\
+    linkcolor={black},\
+    citecolor={blue!50!black},\
+    urlcolor={blue!80!black}}\n")
+#+end_src
+
+** ~org-ref~ configuration
+~org-ref~ is a useful tool for implementing a nice, native way to add citations and references to org-mode.
+However, it requires a lot of configuration, so here we set some. See =M-x org-ref-help= for more information.
+It just sets some default files, like where the main ~*.bib~ file is found, and some other miscellaneous things.
+#+begin_src elisp
+(setq org-ref-completion-library 'org-ref-ivy-cite) ;; set `ivy' as the main completion library
+
+(setq org-ref-bibliography-notes "~/Documents/Bibliography/notes.org" ;; where bib notes are
+      org-ref-default-bibliography '("~/Documents/Bibliography/references.bib") ;; default bib file
+      org-ref-pdf-directory "~/Documents/Bibliography/bibtex-pdfs/") ;; directory to find pdfs
+;; Specify where pdfs can be found
+(setq bibtex-completion-library-path '("~/Documents/Bibliography/bibtex-pdfs"))
+;; Specify where the `notes.org' file/directory can be found
+(setq bibtex-completion-notes-path "~/Documents/Bibliography/notes.org")
+(setq bibtex-completion-pdf-open-function 'org-open-file)
+#+end_src
+
+*   Keybindings
+Doom Emacs comes with /very/ sane default keybindings out of the box compared to default Emacs, as it won't give you carpal tunnel syndrome after two minutes of use. I like to use ~org-noter~, but it doesn't have many useful default bindings, so here we define some.
+#+begin_src elisp
+(map! :leader
+      :desc "Synchronize document to selected note"
+      "n ." #'org-noter-sync-current-note)
+(map! :leader
+      :desc "Insert a new note"
+      "n p" #'org-noter-insert-note)
+(map! :leader
+      :desc "Insert a precise note"
+      "n P" #'org-noter-insert-precise-note)
+#+end_src
+
+*   Mail (~mu4e~)
+Emacs can do many things other than text editing, like emails!
+Emacs' ~mu4e~ email client is probably the /best/ text-based email client there is.
+~neomutt~ is probably its closest competitor, but ever since it's on the terminal, it can't display images or do fancy formatting.
+This part of the config contains sensitive information, so this bit will hidden.
+#+begin_src elisp
+(setq org-msg-convert-citation t)
+(set-email-account! "disroot"
+                    '((mu4e-sent-folder       . "/disroot/Sent")
+                      (mu4e-drafts-folder     . "/disroot/Drafts")
+                      (mu4e-trash-folder      . "/disroot/Trash")
+                      (mu4e-refile-folder     . "/disroot/Archive")
+                      (smtpmail-smtp-user     . "mdsc@disroot.org")
+                      (mu4e-compose-signature . "---\nMadsci")))
+#+end_src

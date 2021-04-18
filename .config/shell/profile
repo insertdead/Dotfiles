@@ -4,13 +4,13 @@
 declare -A ZINIT
 
 # ENV vars are set here
-export PATH="$HOME/.emacs.d/bin:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.bin:$HOME/.ghcup/bin:$HOME/.cabal/bin:$HOME/.nodenv/bin:$HOME/.rubenv/bin:$HOME/.local/share/poetry/bin:$PATH"
+export PATH="$HOME/.config/emacs/bin:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.bin:$HOME/.ghcup/bin:$HOME/.cabal/bin:$HOME/.nodenv/bin:$HOME/.rubenv/bin:$HOME/.local/share/poetry/bin:$PATH"
 
 unsetopt PROMPT_SP
 
 # Default applications
 export EDITOR="nvim"
-export TERMINAL="alacritty"
+export TERMINAL="st"
 export BROWSER="librewolf"
 export MANPAGER="nvim +Man!"
 
@@ -49,6 +49,7 @@ export ZINIT[SNIPPETS_DIR]="${XDG_DATA_HOME:-$HOME/.local/share}/zinit/snippets"
 export ZINIT[ZCOMPDUMP_PATH]="$ZDOTDIR/zcompdump"
 
 # Other program settings:
+export MAILDIR="$HOME/Mail"
 export DICS="/usr/share/stardict/dic/"
 export SUDO_ASKPASS="$HOME/.local/bin/dmenupass"
 export FZF_DEFAULT_OPTS="--layout=reverse --height 40%"
@@ -82,7 +83,7 @@ setopt HIST_IGNORE_ALL_DUPS
 # Startup
 #
 # Start X at login
-[ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC"
+sh -c '[ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC"'
 
 # *envs (rbenv, nodenv, ghcup)
 [ -f "/home/madsci/.ghcup/env" ] && source "/home/madsci/.ghcup/env" # ghcup-env
@@ -94,6 +95,6 @@ colorscript -r
 
 # source aliases and Xresources
 source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliases"
-xrdb -load "${XDG_CONFIG_HOME:-$HOME/.config}/shell/xresources"
+xrdb -load "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources"
 
 export PATH="$HOME/.poetry/bin:$PATH"
