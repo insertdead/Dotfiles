@@ -18,8 +18,10 @@ end
 ----------------------------------- Settings ------------------------------------
 local indent = 2
 local width = 80
+
 --  Tabs
 o.showtabline = 0
+
 --    Indenting
 o.modeline = true
 o.modelines = 5
@@ -27,16 +29,19 @@ bo.smartindent = true
 bo.expandtab = true
 bo.tabstop = indent
 bo.shiftwidth = indent
+
 --  Search & History
 o.ignorecase = true
 o.smartcase = true
 o.incsearch = true
 o.hlsearch = true
 o.history = 5000
+
 --  Lines
 bo.textwidth = width
 wo.number = true
 wo.relativenumber = true
+
 --  ctrl-space
 o.hidden = true
 o.encoding= 'utf-8'
@@ -46,15 +51,17 @@ g['CtrlSpaceStatuslineFunction'] = 'airline#extensions#ctrlspace#statusline()'
 if fn.executable('ag') then
   g['CtrlSpaceGlobCommand'] = 'ag -l --nocolor -g ""'
 end
+
 --  Statusbar
 o.showcmd = true
+
 --      Airline
 g['airline_powerline_fonts'] = 1
 g['airline#extensions#ale#enabled'] = 1
 g['airline#extensions#tabline#enabled'] = 1
+
 -- Completion
-require('loadlsp') -- Language servers to load
-o.completeopt = 'menuone,noinsert,noselect'
+
 --  Theme
 --  LPT: set your term to 'xterm-256color' in your terminal config if using tmux
 o.termguicolors = true
@@ -62,9 +69,7 @@ g['nord_cursor_line_number_background'] = 1
 g['nord_italic_comments'] = 1
 g['nord_underline'] = 1
 g['airline_theme'] = 'nord'
-g['NERDTreeFileExtensionHighlightFullName'] = 1
-g['NERDTreeExactMatchHighlightFullName'] = 1
-g['NERDTreePatternMatchHighlightFullName'] = 1
+
 --  Plugins
 --      Deol
 g['deol#custom_map'] = {edit = 'e'
@@ -80,11 +85,8 @@ g['deol#custom_map'] = {edit = 'e'
         , quit = 'q'
 }
 -- 	Treesitter
--- local ts = require'nvim-treesitter.configs'.setup
--- ts{highlight = {enable = true}, ensure_installed = "maintained"}
---	Deoplete
-g['deoplete#enable_at_startup'] = 1
-g['deoplete#lsp#use_icons_for_candidates'] = true
+local ts = require'nvim-treesitter.configs'.setup
+ts{highlight = {enable = true}, ensure_installed = "maintained"}
 -- Snippets
 g['UltiSnipsExpandTrigger'] = '<Tab>'
 g['UltiSnipsJumpForwardTrigger'] = '<C-x>'
@@ -120,12 +122,10 @@ map('n', '<Leader>wl', '<C-w>l')
 map('n', '<M-x>', ':')
 
 -- Files (NERDTree, netrw/Defx)
-map('n', '<Leader>ft', ':NERDTreeToggle %<CR>')
-map('n', '<Leader>ff', ':NERDTreeToggle ~/<CR>')
+--map('n', '<Leader>ft', ':NERDTreeToggle %<CR>')
+--map('n', '<Leader>ff', ':NERDTreeToggle ~/<CR>')
 
 --  Commands
---      Plugins
--- map('n', '<Leader>ff', ':Defx `escape(expand(\'%:p:h\'), \' :\') -search=`expand(\'%:p\')<CR>')
 --      Other
 map('n', '<silent><Leader><Return>', ':nohlsearch<CR>')
 
