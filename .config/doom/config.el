@@ -2,7 +2,7 @@
       user-mail-address "mdsc@disroot.org")
 
 (setq doom-font (font-spec :family "Iosevka Nerd Font" :size 13) ; :weight 'semi-light
-      doom-variable-pitch-font (font-spec :family "Droid Sans" :size 14))
+      doom-variable-pitch-font (font-spec :family "Noto Sans Nerd Font" :size 15))
 
 (setq doom-theme 'doom-nord)
 
@@ -47,6 +47,7 @@
       :desc "Insert a precise note"
       "n P" #'org-noter-insert-precise-note)
 
+(setq org-msg-convert-citation t)
 (set-email-account! "disroot"
                     '((mu4e-sent-folder       . "/disroot/Sent")
                       (mu4e-drafts-folder     . "/disroot/Drafts")

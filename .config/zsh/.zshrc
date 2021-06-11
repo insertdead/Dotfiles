@@ -89,3 +89,5 @@ SPACESHIP_PROMPT_ORDER=(
 )
 
 export PATH="$HOME/.poetry/bin:$PATH"
+
+export PATH="$HOME/.local/share/poetry/bin:$PATH"

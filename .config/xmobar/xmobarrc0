@@ -1,16 +1,17 @@
 -- http://projects.haskell.org/xmobar/
 -- install xmobar with these flags: --flags="with_alsa" --flags="with_mpd" --flags="with_xft"  OR --flags="all_extensions"
 -- you can find weather location codes here: http://weather.noaa.gov/index.html
+-- vim: ft=haskell
 
 Config { font    = "xft:Ubuntu Nerd Font:weight=bold:pixelsize=11:antialias=true:hinting=true"
        , additionalFonts = [ "xft:Mononoki Nerd Font:pixelsize=11:antialias=true:hinting=true"
                            , "xft:Mononoki Nerd Font:pixelsize=14:antialias=true:hinting=true"
-                           , "xft:FontAwesome:pixelsize=12"
+                           , "xft:FontAwesome:pixelsize=10"
 			   , "xft:JoyPixels:pixelsize=12"
                            ]
-       , bgColor = "#2e3440"
+       , bgColor = "#3b4252"
        , fgColor = "#81a1c1"
-       , position = Static { xpos = 0 , ypos = 0, width = 1920, height = 30 }
+       , position = Static { xpos = 20, ypos = 10, width = 3400, height = 30 }
        , lowerOnStart = True
        , hideOnStart = False
        , allDesktops = True
@@ -20,7 +21,7 @@ Config { font    = "xft:Ubuntu Nerd Font:weight=bold:pixelsize=11:antialias=true
                       -- Time and date
                       Run Date "<fn=3>\xf133</fn> %b %d %Y - (%H:%M)" "date" 50
                       -- Network up and down
-                    , Run Network "wlp0s20f3" ["-t", "<fn=3>\xf0aa</fn> <rx>kb  <fn=3>\xf0ab</fn> <tx>kb"] 20
+                    , Run Network "enp34s0" ["-t", "<fn=3>\xf0ab</fn> <rx>kb  <fn=3>\xf0aa</fn> <tx>kb"] 20
                       -- Cpu usage in percent
                     , Run Cpu ["-t", "<fn=3>\xf108</fn> cpu: (<total>%)","-H","50","--high","red"] 20
                       -- Ram used number and percent
@@ -29,16 +30,16 @@ Config { font    = "xft:Ubuntu Nerd Font:weight=bold:pixelsize=11:antialias=true
                     , Run DiskU [("/", "<fn=3>\xf0c7</fn> hdd: <free> free")] [] 60
                       -- Runs custom script to check for pacman updates.
                       -- This script is in my dotfiles repo in .local/bin.
-                    , Run Com "/home/madsci/.local/bin/pacupdate" [] "pacupdate" 36000
+                    -- , Run Com "/home/madsci/.local/bin/pacupdate" [] "pacupdate" 36000
                       -- Runs a standard shell command 'uname -r' to get kernel version
                     , Run Com "uname" ["-r"] "" 3600
                       -- Prints out the left side items such as workspaces, layout, etc.
                       -- The workspaces are 'clickable' in my configs.
                     , Run UnsafeStdinReader
                       -- Tray padding
-                    , Run Com "/home/madsci/.config/xmobar/trayer-padding-icon.sh" [] "trayerpad" 10
+                    -- , Run Com "/home/madsci/.config/xmobar/trayer-padding-icon.sh" [] "trayerpad" 10
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = " <action=`xdotool key control+alt+g`><icon=haskell_20.xpm/> </action><fc=#4c566a>  |</fc> %UnsafeStdinReader% }{ <fc=#4c566a><fn=2>|</fn> </fc><fc=#81a1c1><fn=3></fn>  %uname% </fc><fc=#4c566a> <fn=2>|</fn></fc> <fc=#ebcb8b> %cpu% </fc><fc=#4c566a> <fn=2>|</fn></fc> <fc=#bf616a> %memory% </fc><fc=#4c566a> <fn=2>|</fn></fc> <fc=#5e81ac> %disku% </fc><fc=#4c566a> <fn=2>|</fn></fc> <fc=#a3be8c> %wlp0s20f3% </fc><fc=#4c566a> <fn=2>|</fn></fc> <fc=#b48ead><fn=3></fn>  %pacupdate% </fc><fc=#4c566a> <fn=2>|</fn></fc> <fc=#88c0d0> %date%  </fc> %trayerpad%"
+       , template = " <action=`xdotool key control+alt+g`><icon=haskell_20.xpm/> </action><fc=#4c566a>  |</fc> %UnsafeStdinReader% }{ <fc=#4c566a><fn=2>|</fn> </fc><fc=#81a1c1><fn=3></fn>  %uname% </fc><fc=#4c566a> <fn=2>|</fn></fc> <fc=#ebcb8b> %cpu% </fc><fc=#4c566a> <fn=2>|</fn></fc> <fc=#bf616a> %memory% </fc><fc=#4c566a> <fn=2>|</fn></fc> <fc=#5e81ac> %disku% </fc><fc=#4c566a> <fn=2>|</fn></fc> <fc=#a3be8c> %enp34s0% </fc><fc=#4c566a> <fn=2>|</fn></fc> <fc=#88c0d0> %date%  </fc> "
        }

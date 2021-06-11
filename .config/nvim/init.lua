@@ -38,7 +38,7 @@ o.hlsearch = true
 o.history = 5000
 
 --  Lines
-bo.textwidth = width
+--   bo.textwidth = width
 wo.number = true
 wo.relativenumber = true
 
@@ -84,7 +84,8 @@ g['deol#custom_map'] = {edit = 'e'
         , bg = '<C-z>'
         , quit = 'q'
 }
--- 	Treesitter
+-- 	Treesitter/Syntax highlighting
+g['ch_syntax_for_h'] = 1
 local ts = require'nvim-treesitter.configs'.setup
 ts{highlight = {enable = true}, ensure_installed = "maintained"}
 -- Snippets
@@ -113,7 +114,8 @@ map('n', '<Leader>tl', ':tabn<CR>')
 map('n', '<Leader>tc', ':q<CR>')
 --      Windows
 map('n', '<Leader>wn', ':vertical new<CR>')
-map('n', '<Leader>wc', ':q')
+map('n', '<Leader>we', ':new<CR>')
+map('n', '<Leader>wc', ':q<CR>')
 map('n', '<Leader>wh', '<C-w>h')
 map('n', '<Leader>wj', '<C-w>j')
 map('n', '<Leader>wk', '<C-w>k')

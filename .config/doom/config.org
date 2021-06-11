@@ -21,7 +21,7 @@ You can change the font by changing the string in ~doom-font~.
 
 #+begin_src elisp
 (setq doom-font (font-spec :family "Iosevka Nerd Font" :size 13) ; :weight 'semi-light
-      doom-variable-pitch-font (font-spec :family "Droid Sans" :size 14))
+      doom-variable-pitch-font (font-spec :family "Noto Sans Nerd Font" :size 15))
 
 (setq doom-theme 'doom-nord)
 #+end_src

@@ -4,7 +4,8 @@
 declare -A ZINIT
 
 # ENV vars are set here
-export PATH="$HOME/.config/emacs/bin:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.bin:$HOME/.ghcup/bin:$HOME/.cabal/bin:$HOME/.nodenv/bin:$HOME/.rubenv/bin:$HOME/.local/share/poetry/bin:$PATH"
+export SPICETIFY_INSTALL="/home/madsci/spicetify-cli"
+export PATH="$HOME/.config/emacs/bin:$HOME/.local/bin:$HOME/.local/share/cargo/bin:$HOME/.bin:$HOME/.ghcup/bin:$HOME/.cabal/bin:$HOME/.nodenv/bin:$HOME/.rbenv/bin:$HOME/.pyenv/bin:$HOME/.local/share/poetry/bin:$SPICETIFY_INSTALL:$PATH"
 
 unsetopt PROMPT_SP
 
@@ -96,5 +97,3 @@ colorscript -r
 # source aliases and Xresources
 source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliases"
 xrdb -load "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources"
-
-export PATH="$HOME/.poetry/bin:$PATH"

@@ -22,7 +22,7 @@ paq 'Shougo/deol.nvim'
 paq 'tpope/vim-surround'
 paq 'ludovicchabant/vim-gutentags'
 paq 'tpope/vim-commentary'
-paq 'dense-analysis/ale'
+-- paq 'dense-analysis/ale'
 paq 'ryanoasis/vim-devicons'
 -- Snippets
 paq 'SirVer/ultisnips'

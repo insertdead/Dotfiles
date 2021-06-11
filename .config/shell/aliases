@@ -24,8 +24,6 @@ alias \
 # flags
 alias \
   cp="cp -i" \
-  rm="trash" \
-  rme="trash-empty"
 
 # Shorten
 alias \
@@ -45,6 +43,12 @@ alias \
   ...="cd ../.." \
   .4="cd ../../.." \
   .5="cd ../../../.."
+
+# Emerge
+alias \
+  emerge="doas emerge --ask" \
+  secmerge="command emerge --search" \
+  unmerge="emerge --ask --depclean" \
 
 #Power control
 alias reboot="doas reboot" \
