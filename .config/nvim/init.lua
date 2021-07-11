@@ -25,10 +25,10 @@ o.showtabline = 0
 --    Indenting
 o.modeline = true
 o.modelines = 5
-bo.smartindent = true
-bo.expandtab = true
-bo.tabstop = indent
-bo.shiftwidth = indent
+o.smartindent = true
+o.expandtab = true
+o.tabstop = indent
+o.shiftwidth = indent
 
 --  Search & History
 o.ignorecase = true
@@ -85,13 +85,10 @@ g['deol#custom_map'] = {edit = 'e'
         , quit = 'q'
 }
 -- 	Treesitter/Syntax highlighting
-g['ch_syntax_for_h'] = 1
+g['c_syntax_for_h'] = 1
 local ts = require'nvim-treesitter.configs'.setup
 ts{highlight = {enable = true}, ensure_installed = "maintained"}
 -- Snippets
-g['UltiSnipsExpandTrigger'] = '<Tab>'
-g['UltiSnipsJumpForwardTrigger'] = '<C-x>'
-g['UltiSnipsJumpBackwardTrigger'] = '<C-z>'
 g['UltiSnipsEditSplit'] = 'tabdo'
 -- Vimtex/LaTeX
 g['vimtex_compiler_method'] = 'latexmk'
@@ -129,10 +126,10 @@ map('n', '<M-x>', ':')
 
 --  Commands
 --      Other
-map('n', '<silent><Leader><Return>', ':nohlsearch<CR>')
+map('n', '<Leader><Return>', '<silent>:nohlsearch<CR>')
 
 -- Snippets
-map('n', '<Spacesn', 'UltiSnipsEdit')
+map('n', '<Space>sn', 'UltiSnipsEdit')
 
 --------------------------------- Abbreviations ---------------------------------
 --  Command Abbreviations

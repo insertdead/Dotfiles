@@ -90,6 +90,7 @@ sh -c '[ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec sta
 [ -f "/home/madsci/.ghcup/env" ] && source "/home/madsci/.ghcup/env" # ghcup-env
 eval "$(nodenv init -)"
 eval "$(rbenv init -)"
+ eval "$(starship init $SHELL)"
  
 # Other
 colorscript -r

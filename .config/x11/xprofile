@@ -38,10 +38,10 @@ gpg-agent --daemon &
 # /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # auto-mount disks n stuff
-# devmon &
+devmon 2>&1 > /dev/null &
 
 # pass for browsers - comment if you don't have the program
-# browserpass &
+/usr/libexec/browserpass-native &
 
 # Allow sandboxing user to open X windows
 xhost si:localuser:ff &
@@ -52,6 +52,9 @@ xset r rate 300 50 &
 
 # Redshifting colors to make nice for eyes
 redshift -l 43.54:-80.06 &
+
+# I2P daemon
+# ~/i2p/i2prouter start &
 
 # Start Pulseaudio (audio)
 pulseaudio &

@@ -78,7 +78,10 @@ myBrowser :: String
 myBrowser = "TZ=UTC qutebrowser" -- Sets qutebrowser as primary browser
 
 myAltBrowser :: String
-myAltBrowser = "doas -u ff firefox "  -- Sets firefox as alternate browser
+myAltBrowser = "doas -u ff firefox -profile ~ff/.mozilla/firefox/76apxb7j.default-release"  -- Sets firefox as alternate browser
+
+myI2PBrowser :: String
+myI2PBrowser = "doas -u ff firefox -profile ~ff/.mozilla/firefox/6guurduo.I2P"
 
 myEmacs :: String
 myEmacs = "emacsclient -c -a 'emacs' "  -- Makes emacs keybindings easier to type
@@ -313,9 +316,10 @@ myManageHook = composeAll
      , title =? "Mozilla Firefox"     --> doShift ( myWorkspaces !! 1 )
      , className =? "brave-browser"   --> doShift ( myWorkspaces !! 1 )
      , className =? "qutebrowser"     --> doShift ( myWorkspaces !! 1 )
+     , className =? "Steam"           --> doShift ( myWorkspaces !! 4 )
+     , className =? "discord"         --> doShift ( myWorkspaces !! 5 )
      , className =? "mpv"             --> doShift ( myWorkspaces !! 7 )
      , className =? "Gimp"            --> doShift ( myWorkspaces !! 8 )
-     , className =? "VirtualBox Manager" --> doShift  ( myWorkspaces !! 4 )
      , (className =? "firefox" <&&> resource =? "Dialog") --> doFloat  -- Float Firefox Dialog
      , isFullscreen -->  doFullFloat
      ] <+> namedScratchpadManageHook myScratchPads
@@ -349,7 +353,8 @@ myKeys =
     -- Useful programs to have a keybinding for launch
         , ("M-<Return>", spawn (myTerminal))
         , ("M-b", spawn (myBrowser))
-        , ("M-q", spawn (myBrowser ++ " -p noPrivacy"))
+        , ("M-q", spawn (myAltBrowser))
+        , ("M-S-b", spawn (myI2PBrowser))
         , ("M-M1-h", spawn (myTerminal ++ " -e bpytop"))
 
     -- Kill windows
