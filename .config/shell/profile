@@ -9,18 +9,19 @@ export PATH="$HOME/.config/emacs/bin:$HOME/.local/bin:$HOME/.local/share/cargo/b
 
 unsetopt PROMPT_SP
 
-# Default applications
+# Defaults
 export EDITOR="nvim"
 export TERMINAL="st"
 export BROWSER="librewolf"
 export MANPAGER="nvim +Man!"
+export THEME="onedark"
 
 # ~/ Clean-up:
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc"
-export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" # This line will break some DMs.
+# export XAUTHORITY="$XDG_RUNTIME_DIR/Xauthority" # This line will break some DMs.
 export NOTMUCH_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/notmuch-config"
 export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
 export LESSHISTFILE="-" export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
@@ -97,4 +98,3 @@ colorscript -r
 
 # source aliases and Xresources
 source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/aliases"
-xrdb -load "${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources"

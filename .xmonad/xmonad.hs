@@ -107,6 +107,7 @@ myStartupHook = do
     -- spawnOnce "sh ~/.config/x11/xprofile &"
     spawnOnce "sleep 1s &"
     spawnOnce "xsetroot -cursor_name left_ptr &"
+    spawnOnce "dunst -conf ~/.config/dunst/dunstrc-onedark &"
     -- spawnOnce "nm-applet &"
     -- spawnOnce "volumeicon &"
     -- spawnOnce "trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor 1 --transparent true --alpha 0 --tint 0x282c34  --height 22 &"

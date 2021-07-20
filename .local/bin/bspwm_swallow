@@ -1,0 +1,74 @@
+#!/bin/sh
+# Credits to @rnhmjoj on github
+## window swallowing options
+
+# classes considered a terminal emulator, meaning
+# to be hidden when a node is added while focused
+terminal="St"
+
+# classes that should never hide a `terminal`
+blacklist="xev xclock"
+
+# other combinations of parent/child where the child
+# window should "swallow" the parent.
+special="qutebrowser/mpv Firefox/mpv"
+ids=$XDG_RUNTIME_DIR/swallow
+
+get_class() {
+  xprop -id "$1" | awk -F '"' '/WM_CLASS/{print $4}'
+}
+
+save_presel() {
+  test "$2" = cancel && export last_presel="$1"
+}
+
+swallow() {
+  child_id=$1
+  parent_id=$(bspc query -N -n last)
+  this_desktop=$2
+  term_desktop=$(bspc query -D -n last)
+  insert_point=$3
+
+  if test "$insert_point" = "$last_presel"; then
+    unset last_presel
+    return
+  fi
+
+  test "$this_desktop" != "$term_desktop" && return
+  child_class=$(get_class "$child_id")
+  echo "$terminal $blacklist" | grep -i "$child_class" && return
+
+  parent_class=$(get_class "$parent_id")
+  ! echo "$terminal" | grep -i "$parent_class" && \
+  ! echo "$special" | grep -i "$parent_class/$child_class" && return
+
+  echo "$child_id $parent_id" >> "$ids"
+  bspc node "$parent_id" --flag hidden=on
+}
+
+spit() {
+  child_id=$1
+  this_desktop=$2
+
+  grep "^$child_id" "$ids" || return
+
+  parent_id=$(awk "/^$child_id/"'{print $2}' "$ids")
+  term_desktop=$(bspc query -D -n "$parent_id")
+
+  bspc node "$parent_id" --flag hidden=off
+  test "$term_desktop" != "$this_desktop"  && bspc node "$parent_id" -d "$this_desktop"
+  bspc node "$parent_id" -f
+  sed -i "/^$child_id/d" "$ids"
+}
+
+# bspwm event handler
+pgrep bspc && exit
+bspc subscribe node_presel node_add node_remove node_flag |
+while read -r msg; do
+  set -- $msg
+  case "$1" in
+    node_presel) save_presel "$4" "$5" ;;
+    node_add) swallow "$5" "$3" "$4";;
+    node_remove) spit "$4" "$3" ;;
+  esac
+done &

@@ -7,16 +7,16 @@ export WEECHAT_HOME=$XDG_CONFIG_HOME/weechat
 export TERMINAL=st
 
 # set root image (wallpaper)
-hsetroot -fill ~/.cache/wallpaper.png
+hsetroot -fill ~/.cache/wallpaper.png &
 
 # daemon to set graphical settings (GTK, cursor, etc)
-xsettingsd &
+xsettingsd -c ${XDG_CONFIG_HOME:-$HOME/.config}/xsettingsd/${THEME}.conf || xsettingsd -c ${XDG_CONFIG_HOME:-$HOME/.config}/xsettingsd/nord.conf &
 
 # Merge xresources file
-xrdb -merge ~/.config/x11/xresources
+xrdb -merge ~/.config/x11/xresources-${THEME} || xrdb -merge ~/.config/x11/xresources &
 
 # notifications
-dunst &
+dunst -conf ~/.config/dunst/dunstrc-${THEME} &
 
 # Start emacs daemon 
 # emacs --daemon &
@@ -28,7 +28,7 @@ picom &
 # xcompmgr &
 
 # Remove cursor when idle
-# unclutter --timeout 1 &
+unclutter --keystroke --idle 1 &
 
 # Start gpg-agent - To allow unlocking of ssh keys with pam-gnupg
 gpg-agent --daemon &
@@ -52,9 +52,6 @@ xset r rate 300 50 &
 
 # Redshifting colors to make nice for eyes
 redshift -l 43.54:-80.06 &
-
-# I2P daemon
-# ~/i2p/i2prouter start &
 
 # Start Pulseaudio (audio)
 pulseaudio &

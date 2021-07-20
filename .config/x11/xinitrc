@@ -12,6 +12,7 @@ else
   . "$HOME/.xprofile"
 fi
 
-exec dbus-run-session xmonad
-# exec dbus-run-session
-# exec xmonad
+
+exec dbus-run-session bspwm
+# exec dbus-run-session xmonad
+# exec bspwm
