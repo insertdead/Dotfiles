@@ -18,11 +18,21 @@ ctrl + p ; {c,w,s}
   rofi -show {calc,window,ssh}
 # Useful programs
 super + {b, q, shift + b}
-  doas -u ff firefox -P {default-release, noPrivacy, I2P}
+  firefox -P {default-release, noPrivacy, I2P}
 
 # make sxhkd reload its configuration files:
 super + Escape
   pkill -USR1 -x sxhkd
+
+# Media keys
+F10
+  pamixer -t
+
+F11
+  pamixer -d 5
+
+F12
+  pamixer -i 5
 
 #
 # bspwm hotkeys

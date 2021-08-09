@@ -7,13 +7,13 @@ export WEECHAT_HOME=$XDG_CONFIG_HOME/weechat
 export TERMINAL=st
 
 # set root image (wallpaper)
-hsetroot -fill ~/.cache/wallpaper.png &
+# hsetroot -fill ~/.cache/wallpaper.png &
 
 # daemon to set graphical settings (GTK, cursor, etc)
 xsettingsd -c ${XDG_CONFIG_HOME:-$HOME/.config}/xsettingsd/${THEME}.conf || xsettingsd -c ${XDG_CONFIG_HOME:-$HOME/.config}/xsettingsd/nord.conf &
 
 # Merge xresources file
-xrdb -merge ~/.config/x11/xresources-${THEME} || xrdb -merge ~/.config/x11/xresources &
+xrdb -load ~/.config/x11/xresources-${THEME} || xrdb -load ~/.config/x11/xresources &
 
 # notifications
 dunst -conf ~/.config/dunst/dunstrc-${THEME} &
@@ -54,4 +54,4 @@ xset r rate 300 50 &
 redshift -l 43.54:-80.06 &
 
 # Start Pulseaudio (audio)
-pulseaudio &
+pipewire &
