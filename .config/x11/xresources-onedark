@@ -1,0 +1,50 @@
+! vim: filetype=xdefaults
+
+#define base0 #282c34
+#define base1 #353b45
+#define base2 #3e4451
+#define base3 #545862
+#define base4 #565c64
+#define base5 #abb2bf
+#define base6 #b6bdca
+#define base7 #c8ccd4
+#define base8 #e06c75
+#define base9 #d19a66
+#define base0A #e5c07b
+#define base0B #98c379
+#define base0C #56b6c2
+#define base0D #61afef
+#define base0E #c678dd
+#define base0F #be5046
+
+*.foreground:   base5
+*.background:   #1b1f27
+*.cursorColor:  base4
+*fading: 35
+*fadeColor: base3
+
+*.color0: base0
+*.color1: base8
+*.color2: base0B
+*.color3: base0A
+*.color4: base0D
+*.color5: base0E
+*.color6: base0C
+*.color7: base5
+*.color8: base3
+*.color9: base9
+*.color10: base1
+*.color11: base2
+*.color12: base4
+*.color13: base6
+*.color14: base0F
+*.color15: base7
+
+! Cursor theme
+Xcursor.theme: Breeze
+Xcursor.size: 8
+Xcursor.name: left_ptr
+
+! st
+st.opacity: 1.0
+st.font: "JetBrainMono Nerd Font:pixelsize=14:antialias=true:autohint=true"
