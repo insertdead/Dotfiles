@@ -56,3 +56,7 @@ alias \
 alias reboot="doas reboot" \
   poweroff="doas poweroff" \
   shutdown="doas shutdown"
+
+# youtube-dl
+alias yt='youtube-dl --extract-audio --add-metadata --xattrs --embed-thumbnail --audio-quality 0 --audio-format mp3' \
+  ytv='youtube-dl --merge-output-format mp4 -f "bestvideo+bestaudio[ext=m4a]/best" --embed-thumbnail --add-metadata'
